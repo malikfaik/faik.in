@@ -1,0 +1,6 @@
+{
+    "extends": [
+        "stylelint-config-sass-guidelines",
+        "./node_modules/prettier-stylelint/config.js"
+    ]
+}
