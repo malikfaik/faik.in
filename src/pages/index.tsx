@@ -4,7 +4,7 @@ import Footer from '../components/footer-app'
 import Header from '../components/header-app'
 import Cover from '../components/cover-picture'
 import About from '../components/about-section'
-import Experience from '../components/experience-section'
+import Experience from '../components/experience-section/main'
 import Tech from '../components/tech-section/main'
 import Contact from '../components/contact-section'
 
