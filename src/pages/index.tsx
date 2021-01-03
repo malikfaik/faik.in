@@ -11,27 +11,28 @@ import usePageStyle from '../components/common/styles/page-style'
 
 const Home = (): React.ReactElement => {
   const pageStyle = usePageStyle()
+
   return (
     <Grid container>
-      <Grid className={pageStyle.headerFixed} container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid className={pageStyle.headerFixed} container>
         <Header />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <Welcome />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <About />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <Experience />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <Tech />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <Contact />
       </Grid>
-      <Grid container item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <Grid container>
         <Footer />
       </Grid>
     </Grid>
