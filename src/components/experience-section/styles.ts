@@ -33,10 +33,10 @@ const useExperienceSectionStyle = makeStyles(theme => ({
       },
 
       // The line between bullets
-      '&:before': {
+      '&::before': {
         backgroundColor: '#000',
         bottom: 0,
-        content: '""',
+        content: `''`,
         left: '9.2vmin',
         position: 'absolute',
         top: 0,
