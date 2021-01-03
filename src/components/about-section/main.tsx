@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import useAboutSectionStyle from './styles'
-import sectionColumnSize from '../../config/section'
+import { sectionColumnSize } from '../../config/section'
 import useSectionStyle from '../common/styles/section-style'
 import aboutContent from './about-content'
 

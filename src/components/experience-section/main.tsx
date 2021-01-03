@@ -5,8 +5,8 @@ import { useSprings, animated, SpringStartFn } from 'react-spring'
 // Local Imports
 import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
-import { getDateString, onHover } from './helper'
-import sectionColumnSize from '../../config/section'
+import { getDateString, onHover } from './helpers'
+import { sectionColumnSize } from '../../config/section'
 import useSectionStyle from '../common/styles/section-style'
 import { BorderRadiusSetSpring, BorderRadiusSpring } from '../../config/types'
 
