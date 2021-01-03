@@ -1,5 +1,6 @@
 {
     "extends": [
+        "stylelint-config-sass-guidelines",
         "./node_modules/prettier-stylelint/config.js"
     ],
 
@@ -7,7 +8,8 @@
         "max-nesting-depth":5,
         "no-empty-source": null,
         "declaration-empty-line-before": null,
-        "no-missing-end-of-source-newline": null
+        "no-missing-end-of-source-newline": null,
+        "scss/selector-no-redundant-nesting-selector": null
     }
   
 }
