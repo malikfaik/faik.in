@@ -19,7 +19,7 @@ import { BorderRadiusSetSpring, BorderRadiusSpring } from '../../config/types'
 const experienceList = (springs: BorderRadiusSpring[], setSpring: SpringStartFn<BorderRadiusSetSpring>, experienceClasses: Record<string, string>): React.ReactElement[] => {
   return experienceContent.map((data, key) => (
     <li key={data.id} {...onHover(setSpring, 0, 50, key)}>
-      <animated.div className={data.className} style={springs[key]} />
+      <animated.div className={experienceClasses.bulletPoint} style={springs[key]} />
       <div className={experienceClasses.employerName}>{data.name}</div>
       <div className={experienceClasses.experienceDuration}>{getDateString(data.from, data.to)}</div>
     </li>

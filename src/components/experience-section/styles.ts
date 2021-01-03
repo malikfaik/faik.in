@@ -74,9 +74,9 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     borderWidth: '0.3vmin',
     display: 'flex',
     float: 'left',
-    height: '2vmin',
+    height: '2.5vmin',
     overflow: 'hidden',
-    width: '2vmin',
+    width: '2.5vmin',
 
     '& svg': {
       display: 'block',
@@ -89,8 +89,8 @@ const useExperienceSectionStyle = makeStyles(theme => ({
 
     [theme.breakpoints.between('xs', 'md')]: {
       borderWidth: '0.8vmin',
-      height: '4vmin',
-      width: '4vmin'
+      height: '5.5vmin',
+      width: '5.5vmin'
     }
   },
 
