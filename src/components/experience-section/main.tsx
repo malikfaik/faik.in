@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import { useSprings, animated, SpringStartFn } from 'react-spring'
 
 // Local Imports
-import experienceData from './experience-data'
+import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
 import { getDateString, onHover } from './helper'
 import sectionColumnSize from '../../config/section'
@@ -17,7 +17,7 @@ import { BorderRadiusSetSpring, BorderRadiusSpring } from '../../config/types'
  * @param setSpring Setter function for springs
  */
 const experienceList = (springs: BorderRadiusSpring[], setSpring: SpringStartFn<BorderRadiusSetSpring>, experienceClasses: Record<string, string>): React.ReactElement[] => {
-  return experienceData.map((data, key) => (
+  return experienceContent.map((data, key) => (
     <li key={data.id} {...onHover(setSpring, 0, 50, key)}>
       <animated.div className={data.className} style={springs[key]} />
       <div className={experienceClasses.employerName}>{data.name}</div>
@@ -30,7 +30,7 @@ const experienceList = (springs: BorderRadiusSpring[], setSpring: SpringStartFn<
  * Experience Section of the page.
  */
 const Experience = (): React.ReactElement => {
-  const [springs, setSpring] = useSprings(experienceData.length, () => ({ borderRadius: 50 }))
+  const [springs, setSpring] = useSprings(experienceContent.length, () => ({ borderRadius: 50 }))
   const sectionClasses = useSectionStyle()
   const experienceClasses = useExperienceSectionStyle()
   return (
