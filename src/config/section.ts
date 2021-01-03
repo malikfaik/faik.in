@@ -8,7 +8,7 @@ type SectionColumn = {
   xl: GridSizes
 }
 
-const sectionColumnSize: SectionColumn = {
+export const sectionColumnSize: SectionColumn = {
   xs: 12,
   sm: 12,
   md: 12,
@@ -16,4 +16,10 @@ const sectionColumnSize: SectionColumn = {
   xl: 6
 }
 
-export default sectionColumnSize
+export const techSectionColumnSize: SectionColumn = {
+  xs: 3,
+  sm: 3,
+  md: 3,
+  lg: 3,
+  xl: 3
+}

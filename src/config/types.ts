@@ -12,3 +12,12 @@ export type BorderRadiusSpring = {
 export type BorderRadiusSetSpring = {
   borderRadius: number
 }
+
+export type ScaleSpring = {
+  scale: SpringValue<number>
+}
+
+export type OpacitySpring = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  opacity: SpringValue<any>
+}
