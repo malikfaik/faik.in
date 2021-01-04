@@ -85,24 +85,24 @@ const useContactSectionStyle = makeStyles(theme => ({
 
   contactSmileyIcon: {
     display: 'block',
-    left: '42.4%',
-    marginTop: '-2.1%',
+    left: '43.2%',
+    marginTop: '-2.3%',
     position: 'absolute',
 
     [theme.breakpoints.between('xs', 'md')]: {
-      marginLeft: '50%',
+      marginLeft: '49%',
       marginTop: '-5.2%'
     }
   },
 
   contactEmailIcon: {
     marginLeft: '-2.2%',
-    marginTop: '0.3%',
+    marginTop: '0.5%',
     position: 'absolute',
 
     [theme.breakpoints.between('xs', 'md')]: {
       marginLeft: '-6%',
-      marginTop: '1.5%',
+      marginTop: '1.4vmin',
       position: 'absolute'
     }
   },
