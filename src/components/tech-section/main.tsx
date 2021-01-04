@@ -3,9 +3,8 @@ import Grid from '@material-ui/core/Grid'
 import { animated } from 'react-spring'
 import techData from '../../data/tech-data'
 import { useAnimatedIcons, onHover, AnimatedHook } from './helpers'
-import { techSectionColumnSize, sectionColumnSize } from '../../config/section'
+import { techSectionColumnSize, sectionColumnSize } from '../../config/section-grid-size'
 import useTechSectionStyle from './styles'
-import useSectionStyle from '../common/styles/section-style'
 
 /**
  * This functions returns constructed li element with animations.
@@ -34,16 +33,15 @@ const techList = ({ iconSprings, nameSprings }: AnimatedHook, techStyles: Record
  */
 const Tech = (): React.ReactElement => {
   const techStyles = useTechSectionStyle()
-  const sectionStyles = useSectionStyle()
   const animatedSpring = useAnimatedIcons(1, 0, techData.length)
 
   return (
     <>
-      <Grid className={sectionStyles.sectionHead} item {...sectionColumnSize}>
+      <Grid className={techStyles.techHead} item {...sectionColumnSize}>
         <span>Tech</span>
       </Grid>
 
-      <Grid className={`${sectionStyles.sectionBody} ${techStyles.techBody}`} item {...sectionColumnSize}>
+      <Grid className={techStyles.techBody} item {...sectionColumnSize}>
         <div className={techStyles.techMainContainer}>
           <Grid container>{techList(animatedSpring, techStyles)}</Grid>
         </div>

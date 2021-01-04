@@ -1,20 +1,18 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import useAboutSectionStyle from './styles'
-import { sectionColumnSize } from '../../config/section'
-import useSectionStyle from '../common/styles/section-style'
+import { sectionColumnSize } from '../../config/section-grid-size'
 import aboutContent from './about-content'
 
 const About = (): React.ReactElement => {
-  const sectionClasses = useSectionStyle()
   const aboutClasses = useAboutSectionStyle()
   return (
     <>
-      <Grid className={sectionClasses.sectionHead} item {...sectionColumnSize}>
+      <Grid className={aboutClasses.aboutHead} item {...sectionColumnSize}>
         <span>About</span>
       </Grid>
 
-      <Grid className={`${aboutClasses.aboutBody} ${sectionClasses.sectionBody}`} item {...sectionColumnSize}>
+      <Grid className={aboutClasses.aboutBody} item {...sectionColumnSize}>
         <p>{aboutContent.body}</p>
       </Grid>
     </>

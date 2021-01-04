@@ -6,8 +6,7 @@ import { useSprings, animated, SpringStartFn } from 'react-spring'
 import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
 import { getDateString, onHover } from './helpers'
-import { sectionColumnSize } from '../../config/section'
-import useSectionStyle from '../common/styles/section-style'
+import { sectionColumnSize } from '../../config/section-grid-size'
 import { BorderRadiusSetSpring, BorderRadiusSpring } from '../../config/types'
 
 /**
@@ -31,15 +30,14 @@ const experienceList = (springs: BorderRadiusSpring[], setSpring: SpringStartFn<
  */
 const Experience = (): React.ReactElement => {
   const [springs, setSpring] = useSprings(experienceContent.length, () => ({ borderRadius: 50 }))
-  const sectionClasses = useSectionStyle()
   const experienceClasses = useExperienceSectionStyle()
   return (
     <>
-      <Grid className={`${experienceClasses.experienceBody} ${sectionClasses.sectionBody}`} item {...sectionColumnSize}>
+      <Grid className={experienceClasses.experienceBody} item {...sectionColumnSize}>
         <ul className={experienceClasses.experienceList}>{experienceList(springs, setSpring, experienceClasses)}</ul>
       </Grid>
 
-      <Grid className={`${sectionClasses.sectionHead} ${experienceClasses.experienceHead}`} item {...sectionColumnSize}>
+      <Grid className={experienceClasses.experienceHead} item {...sectionColumnSize}>
         <span>Experience</span>
       </Grid>
     </>

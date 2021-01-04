@@ -16,6 +16,14 @@ export const sectionColumnSize: SectionColumn = {
   xl: 6
 }
 
+export const fullLengthColumnSize: SectionColumn = {
+  xs: 12,
+  sm: 12,
+  md: 12,
+  lg: 12,
+  xl: 12
+}
+
 export const techSectionColumnSize: SectionColumn = {
   xs: 3,
   sm: 3,
