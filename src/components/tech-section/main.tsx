@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { animated } from 'react-spring'
-import techData from '../../data/tech-data'
+import techData from './tech-content'
 import { useAnimatedIcons, onHover, AnimatedHook } from './helpers'
 import { techSectionColumnSize, sectionColumnSize } from '../../config/section-grid-size'
 import useTechSectionStyle from './styles'
