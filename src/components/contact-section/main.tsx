@@ -9,6 +9,7 @@ import { useSprings, animated } from 'react-spring'
 import { fullLengthColumnSize, sectionColumnSize } from '../../config/section-grid-size'
 import useContactSectionStyle from './styles'
 import onHover from './helpers'
+import HoverUnderline from '../common-components/link-hover/main'
 
 const AnimatedLinkedin = animated(AiOutlineLinkedin)
 const AnimatedTwitter = animated(FiTwitter)
@@ -54,9 +55,7 @@ const Contact = (): React.ReactElement => {
       <Grid className={contactClasses.footer} item {...fullLengthColumnSize}>
         <BiCopyright />
         <p className={contactClasses.footerYear}> {new Date().getFullYear()}</p>
-        <a className={contactClasses.footerName} href="#/home">
-          Faik Malik
-        </a>
+        <HoverUnderline anchorClass={contactClasses.footerName} href="#/home" linkText="Faik Malik" />
       </Grid>
     </>
   )
