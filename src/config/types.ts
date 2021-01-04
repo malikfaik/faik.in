@@ -17,6 +17,10 @@ export type ScaleSpring = {
   scale: SpringValue<number>
 }
 
+export type ScaleSetSpring = {
+  scale: number
+}
+
 export type OpacitySpring = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   opacity: SpringValue<any>
