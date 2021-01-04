@@ -13,7 +13,7 @@ import useTechSectionStyle from './styles'
  */
 const techList = ({ iconSprings, nameSprings }: AnimatedHook, techStyles: Record<string, string>): React.ReactElement[] =>
   techData.map((data, key) => {
-    const icon = data.iconAvailable ? <data.icon className={techStyles.techIcons} /> : <img src={data.iconPath} className="tech-icons" alt={data.alt} />
+    const icon = data.iconAvailable ? <data.icon className={techStyles.techIcons} /> : <img src={data.iconPath} className={techStyles.techIcons} alt={data.alt} />
 
     return (
       <Grid key={data.id} className={techStyles.techListGrid} {...onHover(1.2, 1, key)} item {...techSectionColumnSize}>
