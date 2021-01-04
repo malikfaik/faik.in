@@ -1,13 +1,18 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import Footer from '../components/footer-app'
-import Header from '../components/header-app'
+import { makeStyles } from '@material-ui/core/styles'
+import Header from '../components/header-section/main'
 import Welcome from '../components/welcome-section/main'
 import About from '../components/about-section/main'
 import Experience from '../components/experience-section/main'
 import Tech from '../components/tech-section/main'
-import Contact from '../components/contact-section'
-import usePageStyle from '../components/common/styles/page-style'
+import Contact from '../components/contact-section/main'
+
+const usePageStyle = makeStyles({
+  headerFixed: {
+    position: 'fixed'
+  }
+})
 
 const Home = (): React.ReactElement => {
   const pageStyle = usePageStyle()
@@ -31,9 +36,6 @@ const Home = (): React.ReactElement => {
       </Grid>
       <Grid container>
         <Contact />
-      </Grid>
-      <Grid container>
-        <Footer />
       </Grid>
     </Grid>
   )
