@@ -65,7 +65,7 @@ const useExperienceSectionStyle = makeStyles(theme => ({
 
       // The line between bullets
       '&::before': {
-        backgroundColor: '#000',
+        backgroundColor: 'rgba(0, 0, 0, 0.87)',
         bottom: 0,
         content: `''`,
         left: '9.2vmin',
@@ -111,7 +111,7 @@ const useExperienceSectionStyle = makeStyles(theme => ({
 
     '& svg': {
       display: 'block',
-      fill: '#000',
+      fill: 'rgba(0, 0, 0, 0.87)',
       height: '100%',
       margin: '0 auto',
       opacity: 1,
