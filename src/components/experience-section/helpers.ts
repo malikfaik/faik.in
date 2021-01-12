@@ -1,5 +1,17 @@
 import { SpringStartFn } from 'react-spring'
 
+export type OnHoverReturn = {
+  onMouseEnter: () => void
+  onMouseLeave: () => void
+}
+
+export type OnHoverInput = {
+  setSpring: SpringStartFn<{ borderRadius: number }>
+  borderRadiusTo: number
+  defaultBorderRadius: number
+  currentIndex: number
+}
+
 /**
  * Formats the date to be displayed correctly by trimming useless parts
  *
@@ -16,18 +28,6 @@ export const getDateString = (dateFrom: Date, dateTo: Date | number): string => 
     formatedToDate = `${moTo} ${yeTo}'`
   }
   return `${moFrom} ${yeFrom}' - ${formatedToDate}`
-}
-
-export type OnHoverReturn = {
-  onMouseEnter: () => void
-  onMouseLeave: () => void
-}
-
-export type OnHoverInput = {
-  setSpring: SpringStartFn<{ borderRadius: number }>
-  borderRadiusTo: number
-  defaultBorderRadius: number
-  currentIndex: number
 }
 
 /**
