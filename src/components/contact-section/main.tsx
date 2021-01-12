@@ -1,15 +1,34 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
+import { animated } from 'react-spring'
 import { FaRegLaughWink } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { AiOutlineLinkedin } from 'react-icons/ai'
 import { FiTwitter, FiGithub } from 'react-icons/fi'
 import { BiCopyright } from 'react-icons/bi'
-import { useSprings, animated } from 'react-spring'
-import { fullLengthColumnSize, sectionColumnSize } from '../../config/section-grid-size'
+
+// Local Imports
 import useContactSectionStyle from './styles'
-import onHover from './helpers'
+import { onHover, useAnimationHook } from './helpers'
 import HoverUnderline from '../common-components/link-hover/main'
+import { SectionColumn } from '../../config/types'
+import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
+
+const sectionColumnSize: SectionColumn = {
+  xs: 12,
+  sm: 12,
+  md: 12,
+  lg: 6,
+  xl: 6
+}
+
+const fullLengthColumnSize: SectionColumn = {
+  xs: 12,
+  sm: 12,
+  md: 12,
+  lg: 12,
+  xl: 12
+}
 
 const AnimatedLinkedin = animated(AiOutlineLinkedin)
 const AnimatedTwitter = animated(FiTwitter)
@@ -18,7 +37,8 @@ const AnimatedEmail = animated(HiOutlineMail)
 
 const Contact = (): React.ReactElement => {
   const contactClasses = useContactSectionStyle()
-  const [scaleSprings, setScaleSprings] = useSprings(4, () => ({ scale: 1 }))
+  const scaleSprings = useAnimationHook({ size: 4, defaultScale: 1 })
+
   return (
     <>
       <Grid className={contactClasses.contactBody} item {...sectionColumnSize}>
@@ -30,7 +50,7 @@ const Contact = (): React.ReactElement => {
             </div>
           </Grid>
 
-          <Grid {...onHover(1.2, 1, 0, setScaleSprings)} item {...fullLengthColumnSize}>
+          <Grid {...onHover({ scaleTo: 1.2, currentIndex: 0 })} item {...fullLengthColumnSize}>
             <div className={contactClasses.emailContact}>
               <AnimatedEmail style={scaleSprings[0]} className={contactClasses.contactEmailIcon} />
               <span>hi@faik.in</span>
@@ -39,11 +59,11 @@ const Contact = (): React.ReactElement => {
 
           <Grid item {...fullLengthColumnSize}>
             <div className={contactClasses.contactSocialIconWrapper}>
-              <AnimatedLinkedin style={scaleSprings[1]} {...onHover(1.2, 1, 1, setScaleSprings)} className={contactClasses.contactSocialIcon} />
+              <AnimatedLinkedin style={scaleSprings[1]} {...onHover({ scaleTo: 1.2, currentIndex: 1 })} className={contactClasses.contactSocialIcon} />
 
-              <AnimatedTwitter style={scaleSprings[2]} {...onHover(1.2, 1, 2, setScaleSprings)} className={contactClasses.contactSocialIcon} />
+              <AnimatedTwitter style={scaleSprings[2]} {...onHover({ scaleTo: 1.2, currentIndex: 2 })} className={contactClasses.contactSocialIcon} />
 
-              <AnimatedGithub {...onHover(1.2, 1, 3, setScaleSprings)} style={scaleSprings[3]} className={contactClasses.contactSocialIcon} />
+              <AnimatedGithub {...onHover({ scaleTo: 1.2, currentIndex: 3 })} style={scaleSprings[3]} className={contactClasses.contactSocialIcon} />
             </div>
           </Grid>
         </div>
@@ -55,7 +75,8 @@ const Contact = (): React.ReactElement => {
       <Grid className={contactClasses.footer} item {...fullLengthColumnSize}>
         <BiCopyright />
         <p className={contactClasses.footerYear}> {new Date().getFullYear()}</p>
-        <HoverUnderline anchorClass={contactClasses.footerName} href="#/home" linkText="Faik Malik" />
+        {/** @TODO Problem with animate tio scroll Target */}
+        <HoverUnderline onClick={() => animateScrollToTarget('Welcome')} anchorClass={contactClasses.footerName} href="#/welcome" linkText="Faik Malik" />
       </Grid>
     </>
   )
