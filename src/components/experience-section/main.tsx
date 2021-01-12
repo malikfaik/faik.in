@@ -8,18 +8,18 @@ import useExperienceSectionStyle from './styles'
 import { getDateString, onHover, OnHoverInput } from './helpers'
 import { SectionColumn } from '../../config/types'
 
+type ExperienceListInput = {
+  springs: { borderRadius: SpringValue<number> }[]
+  setSpring: OnHoverInput['setSpring']
+  experienceClasses: Record<string, string>
+}
+
 const sectionColumnSize: SectionColumn = {
   xs: 12,
   sm: 12,
   md: 12,
   lg: 6,
   xl: 6
-}
-
-type ExperienceListInput = {
-  springs: { borderRadius: SpringValue<number> }[]
-  setSpring: OnHoverInput['setSpring']
-  experienceClasses: Record<string, string>
 }
 
 /**
