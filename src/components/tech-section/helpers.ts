@@ -1,9 +1,32 @@
-import { useSprings } from 'react-spring'
-import { OnHover, OpacitySpring, ScaleSpring } from '../../config/types'
+import { useSprings, SpringValue } from 'react-spring'
 
 export type AnimatedHook = {
-  iconSprings: ScaleSpring[]
-  nameSprings: OpacitySpring[]
+  iconSprings: { scale: SpringValue<number> }[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  nameSprings: { opacity: SpringValue<any> }[]
+}
+
+export type AnimatedHookInput = {
+  scale: number
+  opacity: number
+  size: number
+}
+
+export type OnHover = {
+  onMouseEnter: () => void
+  onMouseLeave: () => void
+}
+
+export type OnHoverInput = {
+  scaleTo: number
+  opacityTo: number
+  currentIndex: number
+}
+
+type SetAnimationInput = {
+  scale: number
+  opacity: number
+  currentIndex: number
 }
 
 const setAnimatedHooks = {
@@ -25,7 +48,7 @@ const setAnimatedHooks = {
  * @param opacity opacity value to animate
  * @param currentIndex current index
  */
-const setAnimation = (scale: number, opacity: number, currentIndex: number): void => {
+const setAnimation = ({ scale, opacity, currentIndex }: SetAnimationInput): void => {
   if (setAnimatedHooks.hooksAreLive) {
     setAnimatedHooks.setIconSprings(index => {
       if (index === currentIndex) {
@@ -49,7 +72,7 @@ const setAnimation = (scale: number, opacity: number, currentIndex: number): voi
  * @param opacity initial opacity
  * @param size size of the list
  */
-export const useAnimatedIcons = (scale: number, opacity: number, size: number): AnimatedHook => {
+export const useAnimatedIcons = ({ scale, opacity, size }: AnimatedHookInput): AnimatedHook => {
   const [iconSprings, setBackendIconSprings] = useSprings(size, () => ({ scale }))
 
   const [nameSprings, setBackendNameSprings] = useSprings(size, () => ({ opacity }))
@@ -77,8 +100,18 @@ export const useAnimatedIcons = (scale: number, opacity: number, size: number): 
  * @param opacityTo opacity value to animate
  * @param currentIndex current index
  */
-export const onHover = (scaleTo: number, opacityTo: number, currentIndex: number): OnHover => {
-  const onMouseEnter = () => setAnimation(scaleTo, opacityTo, currentIndex)
-  const onMouseLeave = () => setAnimation(setAnimatedHooks.defaults.scale, setAnimatedHooks.defaults.opacity, currentIndex)
+export const onHover = ({ scaleTo, opacityTo, currentIndex }: OnHoverInput): OnHover => {
+  const onMouseEnter = () =>
+    setAnimation({
+      scale: scaleTo,
+      opacity: opacityTo,
+      currentIndex
+    })
+  const onMouseLeave = () =>
+    setAnimation({
+      scale: setAnimatedHooks.defaults.scale,
+      opacity: setAnimatedHooks.defaults.opacity,
+      currentIndex
+    })
   return { onMouseEnter, onMouseLeave }
 }
