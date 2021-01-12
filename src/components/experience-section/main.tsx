@@ -37,7 +37,7 @@ const ExperienceList = ({ springs, setSpring, experienceClasses }: ExperienceLis
           <a {...onHover({ setSpring, borderRadiusTo: 0, defaultBorderRadius: 50, currentIndex: key })}>
             <animated.div className={experienceClasses.bulletPoint} style={springs[key]} />
             <div className={experienceClasses.employerName}>{data.name}</div>
-            <div className={experienceClasses.experienceDuration}>{getDateString(data.from, data.to)}</div>
+            <div className={experienceClasses.experienceDuration}>{getDateString({ dateFrom: data.from, dateTo: data.to })}</div>
           </a>
         </li>
       ))}

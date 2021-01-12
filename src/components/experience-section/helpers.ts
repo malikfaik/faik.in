@@ -12,13 +12,18 @@ export type OnHoverInput = {
   currentIndex: number
 }
 
+export type DateStringInput = {
+  dateFrom: Date
+  dateTo: Date | number
+}
+
 /**
  * Formats the date to be displayed correctly by trimming useless parts
  *
  * @param dateFrom "to" field from the data file
  * @param dateTo "from" field from the data file
  */
-export const getDateString = (dateFrom: Date, dateTo: Date | number): string => {
+export const getDateString = ({ dateFrom, dateTo }: DateStringInput): string => {
   const yeFrom = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(dateFrom).slice(-2)
   const moFrom = new Intl.DateTimeFormat('en', { month: 'short' }).format(dateFrom)
   let formatedToDate = 'present'
