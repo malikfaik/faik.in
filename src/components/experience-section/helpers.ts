@@ -1,6 +1,6 @@
 import { SpringStartFn } from 'react-spring'
 
-export type OnHoverReturn = {
+export type OnHover = {
   onMouseEnter: () => void
   onMouseLeave: () => void
 }
@@ -43,7 +43,7 @@ export const getDateString = ({ dateFrom, dateTo }: DateStringInput): string => 
  * @param defaultBorderRadius default border radius value
  * @param currentIndex current index
  */
-export const onHover = ({ setSpring, borderRadiusTo, defaultBorderRadius, currentIndex }: OnHoverInput): OnHoverReturn => {
+export const onHover = ({ setSpring, borderRadiusTo, defaultBorderRadius, currentIndex }: OnHoverInput): OnHover => {
   const onMouseEnter = () => {
     setSpring(i => {
       if (i === currentIndex) {
