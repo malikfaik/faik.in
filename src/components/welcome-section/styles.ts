@@ -31,28 +31,29 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   nameText: {
     fontSize: '10vmin',
     fontWeight: 'lighter',
+    zIndex: -1,
 
     '& span': {
       display: 'inline-block',
       position: 'relative',
 
       '&::before, &::after': {
-        borderTop: '0.1rem solid #000',
+        borderTop: '0.1rem solid rgba(0, 0, 0, 0.87)',
         content: `''`,
         height: '1vmin',
-        marginTop: '6.2vmin',
+        marginTop: '7vmin',
         position: 'absolute',
         width: '40%'
       },
 
       '&::before': {
-        marginRight: '2vmin',
+        marginRight: '1vmin',
         right: '100%'
       },
 
       '&::after': {
         left: '100%',
-        marginLeft: '2vmin'
+        marginLeft: '1vmin'
       }
     }
   },
@@ -64,6 +65,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     marginTop: '-5%',
     position: 'absolute',
     textAlign: 'center',
+    zIndex: -1,
 
     [theme.breakpoints.between('xs', 'md')]: {
       marginTop: '-10%'
