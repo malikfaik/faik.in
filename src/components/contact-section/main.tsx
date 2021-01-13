@@ -75,7 +75,6 @@ const Contact = (): React.ReactElement => {
       <Grid className={contactClasses.footer} item {...fullLengthColumnSize}>
         <BiCopyright />
         <p className={contactClasses.footerYear}> {new Date().getFullYear()}</p>
-        {/** @TODO Problem with animate tio scroll Target */}
         <HoverUnderline onClick={() => animateScrollToTarget('Welcome')} anchorClass={contactClasses.footerName} href="#/welcome" linkText="Faik Malik" />
       </Grid>
     </>
