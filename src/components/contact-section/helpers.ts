@@ -29,6 +29,13 @@ const animationHookParameters = {
   setScaleSprings: null
 }
 
+/**
+ * Set spring utility function
+ *
+ * @param scale scaleTo
+ * @param currentIndex current index
+ * @param setScaleSprings set spring function
+ */
 const setAnimation = ({ scale, currentIndex, setScaleSprings }: SetAnimationInput): void => {
   setScaleSprings(index => {
     if (index === currentIndex) {
