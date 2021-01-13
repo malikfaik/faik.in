@@ -8,7 +8,7 @@ const useLinkHoverStyles = makeStyles({
   },
 
   svgLine: {
-    stroke: '#000',
+    stroke: 'rgba(0, 0, 0, 0.87)',
     strokeWidth: '0.8vmin'
   },
 

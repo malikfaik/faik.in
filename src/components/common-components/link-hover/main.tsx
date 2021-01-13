@@ -1,22 +1,38 @@
 import React, { useState } from 'react'
 import sizeMe from 'react-sizeme'
 import { useSpring, animated } from 'react-spring'
+
+// Local Imports
 import useLinkHoverStyles from './styles'
 
 type LinkType = {
   anchorClass: string
   linkText: string
   href: string
+  onClick: () => void
 }
 
-const LinkComponent = sizeMe()(({ anchorClass, linkText, href }: LinkType) => {
+/**
+ * Anchor component
+ *
+ * @param anchorClass
+ * @param linkText
+ * @param href
+ * @param onClick
+ */
+const LinkComponent = sizeMe()(({ anchorClass, linkText, href, onClick }: LinkType) => {
   return (
-    <a className={anchorClass} href={href}>
+    <a className={anchorClass} onClick={onClick} href={href}>
       {linkText}
     </a>
   )
 })
 
+/**
+ * onHover anchor tag styled component
+ *
+ * @param inputParams
+ */
 const HoverUnderline = (inputParams: LinkType): React.ReactElement => {
   const hoverStyles = useLinkHoverStyles()
   const [width, setWidth] = useState(10)
