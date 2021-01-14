@@ -65,6 +65,7 @@ const useHeaderSectionStyle = makeStyles(() => ({
     fontWeight: 400,
     listStyleType: 'none',
     marginTop: '15%',
+    paddingInlineStart: 0,
     textAlign: 'center',
     width: '100%',
 
