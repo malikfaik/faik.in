@@ -142,8 +142,10 @@ const useContactSectionStyle = makeStyles(theme => ({
   },
 
   footerName: {
-    color: 'rgba(0, 0, 0, 0.87)',
-    textDecoration: 'none'
+    '& a': {
+      color: 'rgba(0, 0, 0, 0.87)',
+      textDecoration: 'none'
+    }
   }
 }))
 
