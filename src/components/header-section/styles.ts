@@ -70,8 +70,10 @@ const useHeaderSectionStyle = makeStyles(() => ({
     width: '100%',
 
     '& li': {
+      cursor: 'pointer',
       marginTop: '1.5%',
       paddingBottom: '1.5%',
+      userSelect: 'none',
       width: '100%'
     }
   },

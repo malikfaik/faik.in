@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import { useTheme } from '@material-ui/core/styles'
 import { animated } from 'react-spring'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { FiMenu } from 'react-icons/fi'
 import { CgClose } from 'react-icons/cg'
 
 // Local Imports
@@ -79,7 +79,7 @@ const HamburgerNavigationComponent = (headerClasses: Record<string, string>): Re
       </animated.div>
       <div role="presentation" onClick={onMenuClickHandler} className={headerClasses.navigationWrapper}>
         <animated.div className={headerClasses.navigationHamburgerMenu} style={rotateMenu}>
-          <GiHamburgerMenu />
+          <FiMenu />
         </animated.div>
         <animated.div className={headerClasses.navigationHamburgerCross} style={rotateCross}>
           <CgClose />
