@@ -47,7 +47,6 @@ const useExperienceSectionStyle = makeStyles(theme => ({
   },
 
   experienceList: {
-    cursor: 'pointer',
     listStyleType: 'none',
     marginTop: '9.3vmin',
 
@@ -100,14 +99,14 @@ const useExperienceSectionStyle = makeStyles(theme => ({
 
   bulletPoint: {
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderStyle: 'solid',
-    borderWidth: '0.3vmin',
+    backgroundColor: '#212121',
+    borderRadius: '50%',
     display: 'flex',
     float: 'left',
-    height: '2.5vmin',
+    height: '2vmin',
+    marginLeft: '0.2vmin',
     overflow: 'hidden',
-    width: '2.5vmin',
+    width: '2vmin',
 
     '& svg': {
       display: 'block',
@@ -119,9 +118,10 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     },
 
     [theme.breakpoints.between('xs', 'md')]: {
-      borderWidth: '0.8vmin',
-      height: '5.5vmin',
-      width: '5.5vmin'
+      height: '4vmin',
+      marginLeft: '0.7vmin',
+      marginTop: '1.6vmin',
+      width: '4vmin'
     }
   },
 
@@ -138,12 +138,28 @@ const useExperienceSectionStyle = makeStyles(theme => ({
   experienceDuration: {
     float: 'left',
     fontSize: '2vmin',
-    marginTop: 0,
+    marginTop: '-1.6vmin',
     paddingLeft: '2vmin',
 
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '3vmin',
-      marginTop: '1.5vmin'
+      marginTop: '-0.3vmin'
+    }
+  },
+
+  experienceMore: {
+    display: 'inline-block',
+    paddingLeft: '2vmin',
+
+    '& a': {
+      color: 'rgba(0, 0, 0, 0.87)',
+      fontSize: '2vmin',
+      fontWeight: '700',
+      textDecoration: 'none',
+
+      [theme.breakpoints.between('xs', 'md')]: {
+        fontSize: '3vmin'
+      }
     }
   }
 }))

@@ -1,16 +1,16 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import { useSprings, animated, SpringValue } from 'react-spring'
 
 // Local Imports
 import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
-import { getDateString, onHover, OnHoverInput } from './helpers'
+import { getDateString } from './helpers'
 import { SectionColumn } from '../../config/types'
+import ModelBox from '../common-components/model-box/main'
+import { onOpen } from '../common-components/model-box/helpers'
+import HoverUnderline from '../common-components/link-hover/main'
 
 type ExperienceListInput = {
-  springs: { borderRadius: SpringValue<number> }[]
-  setSpring: OnHoverInput['setSpring']
   experienceClasses: Record<string, string>
 }
 
@@ -25,20 +25,33 @@ const sectionColumnSize: SectionColumn = {
 /**
  * This is an experience list child component with animations.
  *
- * @param springs List of springs
- * @param setSpring Setter function for springs
  * @param experienceClasses Experience Styles
  */
-const ExperienceList = ({ springs, setSpring, experienceClasses }: ExperienceListInput): React.ReactElement => {
+const ExperienceList = ({ experienceClasses }: ExperienceListInput): React.ReactElement => {
   return (
     <ul className={experienceClasses.experienceList}>
-      {experienceContent.map((data, key) => (
+      {experienceContent.map(data => (
         <li key={data.id}>
-          <a {...onHover({ setSpring, borderRadiusTo: 0, defaultBorderRadius: 50, currentIndex: key })}>
-            <animated.div className={experienceClasses.bulletPoint} style={springs[key]} />
-            <div className={experienceClasses.employerName}>{data.name}</div>
-            <div className={experienceClasses.experienceDuration}>{getDateString({ dateFrom: data.from, dateTo: data.to })}</div>
-          </a>
+          <div className={experienceClasses.bulletPoint} />
+          <div className={experienceClasses.employerName}>{data.name}</div>
+          <div className={experienceClasses.experienceDuration}>
+            <div>
+              {getDateString({ dateFrom: data.from, dateTo: data.to })}
+              <HoverUnderline
+                onClick={() =>
+                  onOpen({
+                    img: data.img,
+                    description: data.description,
+                    name: data.name,
+                    duration: getDateString({ dateFrom: data.from, dateTo: data.to })
+                  })
+                }
+                anchorClass={experienceClasses.experienceMore}
+                href="#/experience"
+                linkText="more+"
+              />
+            </div>
+          </div>
         </li>
       ))}
     </ul>
@@ -49,12 +62,12 @@ const ExperienceList = ({ springs, setSpring, experienceClasses }: ExperienceLis
  * Experience Section of the page.
  */
 const Experience = (): React.ReactElement => {
-  const [springs, setSpring] = useSprings(experienceContent.length, () => ({ borderRadius: 50 }))
   const experienceClasses = useExperienceSectionStyle()
   return (
     <>
+      <ModelBox />
       <Grid className={experienceClasses.experienceBody} item {...sectionColumnSize}>
-        <ExperienceList {...{ springs, setSpring, experienceClasses }} />
+        <ExperienceList {...{ experienceClasses }} />
       </Grid>
 
       <Grid className={experienceClasses.experienceHead} item {...sectionColumnSize}>
