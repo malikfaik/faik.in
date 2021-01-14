@@ -9,7 +9,7 @@ type LinkType = {
   anchorClass: string
   linkText: string
   href: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 /**
@@ -20,9 +20,9 @@ type LinkType = {
  * @param href
  * @param onClick
  */
-const LinkComponent = sizeMe()(({ anchorClass, linkText, href, onClick }: LinkType) => {
+const LinkComponent = sizeMe()(({ linkText, href, onClick }: LinkType) => {
   return (
-    <a className={anchorClass} onClick={onClick} href={href}>
+    <a onClick={onClick} href={href}>
       {linkText}
     </a>
   )
@@ -47,7 +47,7 @@ const HoverUnderline = (inputParams: LinkType): React.ReactElement => {
       onMouseLeave={() => {
         setSpring({ animate: 0 })
       }}
-      className={hoverStyles.hoverWrapper}
+      className={`${hoverStyles.hoverWrapper} ${inputParams.anchorClass}`}
     >
       <LinkComponent {...inputParams} onSize={onSize} />
       <svg className={hoverStyles.hoverUnderline} style={{ width }}>
