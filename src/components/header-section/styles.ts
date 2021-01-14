@@ -11,11 +11,13 @@ const useHeaderSectionStyle = makeStyles(() => ({
   },
 
   navigationText: {
-    color: 'rgba(0, 0, 0, 0.87)',
-    fontFamily: `'Quicksand', sans-serif`,
-    fontSize: '2vmin',
-    fontWeight: 600,
-    textDecoration: 'none'
+    '& a': {
+      color: 'rgba(0, 0, 0, 0.87)',
+      fontFamily: `'Quicksand', sans-serif`,
+      fontSize: '2vmin',
+      fontWeight: 600,
+      textDecoration: 'none'
+    }
   },
 
   navigationWrapper: {
