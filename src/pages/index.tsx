@@ -2,7 +2,6 @@ import React, { MutableRefObject, useRef, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
-import ReactGA from 'react-ga'
 import * as Rdd from 'react-device-detect'
 import Header from '../components/header-section/main'
 import Welcome from '../components/welcome-section/main'
@@ -11,6 +10,7 @@ import Experience from '../components/experience-section/main'
 import Tech from '../components/tech-section/main'
 import Contact from '../components/contact-section/main'
 import { useScrollAnimation } from '../components/common-components/on-scroll-spring/main'
+import { pageview } from '../utils/analytics'
 
 const usePageStyle = makeStyles({
   headerFixed: {
@@ -28,17 +28,16 @@ const Home = (): React.ReactElement => {
     Contact: useRef(null)
   }
   useEffect(() => {
-    const trackingId = process.env.GAID
-    ReactGA.initialize(trackingId)
-    ReactGA.set({
-      browserVersion: Rdd.fullBrowserVersion,
-      browserName: Rdd.browserName,
-      mobileVendor: Rdd.mobileVendor,
-      mobileModel: Rdd.mobileModel,
-      engineName: Rdd.engineName,
-      deviceType: Rdd.deviceType,
-      userAgent: Rdd.getUA
-    })
+    if (process.env.NODE_ENV === 'production')
+      pageview(window.location.pathname, {
+        browserVersion: Rdd.fullBrowserVersion,
+        browserName: Rdd.browserName,
+        mobileVendor: Rdd.mobileVendor,
+        mobileModel: Rdd.mobileModel,
+        engineName: Rdd.engineName,
+        deviceType: Rdd.deviceType,
+        userAgent: Rdd.getUA
+      })
   })
 
   const pageStyle = usePageStyle()
