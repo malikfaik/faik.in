@@ -63,6 +63,7 @@ const useTechSectionStyle = makeStyles(theme => ({
   techIcons: {
     cursor: 'pointer',
     height: '60%',
+    objectFit: 'contain',
     textAlign: 'center',
     width: '60%',
 

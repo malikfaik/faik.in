@@ -1,131 +1,99 @@
-import { DiNodejsSmall, DiPython, DiReact, DiSass } from 'react-icons/di'
-import { SiAmazonaws, SiApachekafka, SiRabbitmq, SiDocker, SiJenkins } from 'react-icons/si'
+import { DiNodejsSmall, DiPython, DiRedis } from 'react-icons/di'
+import { SiAmazonaws, SiApachekafka, SiRabbitmq, SiDocker, SiJenkins, SiGraphql, SiGo, SiTypescript } from 'react-icons/si'
 
 export default [
   {
     name: 'NodeJs',
     id: 1,
     icon: DiNodejsSmall,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
   },
   {
     name: 'Python',
     id: 2,
     icon: DiPython,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
   },
   {
     name: 'GoLang',
     id: 3,
-    iconPath: '/logos/go.svg',
-    iconAvailable: false,
-    alt: 'golang',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    icon: SiGo,
+    iconAvailable: true
   },
   {
-    name: 'ReactJs',
+    name: 'Typescript',
     id: 4,
-    icon: DiReact,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  },
-  {
-    name: 'NextJs',
-    id: 5,
-    iconPath: '/logos/next-js.svg',
-    alt: 'nextjs',
-    iconAvailable: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  },
-  {
-    name: 'MaterialUI',
-    id: 6,
-    iconPath: '/logos/material-ui.svg',
-    alt: 'materialui',
-    iconAvailable: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  },
-  {
-    name: 'Sass',
-    id: 7,
-    icon: DiSass,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    icon: SiTypescript,
+    iconAvailable: true
   },
   {
     name: 'Cloudformation',
-    id: 8,
+    id: 5,
     iconPath: '/logos/cf.svg',
     alt: 'cloudformation',
-    iconAvailable: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: false
   },
   {
     name: 'Pulumi',
-    id: 9,
+    id: 6,
     iconPath: '/logos/pulumi.svg',
     alt: 'pulumi',
-    iconAvailable: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: false
   },
   {
-    name: 'AWS',
-    id: 10,
-    icon: SiAmazonaws,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    name: 'GraphQL',
+    id: 7,
+    icon: SiGraphql,
+    iconAvailable: true
+  },
+  {
+    name: 'gRPC',
+    id: 8,
+    iconPath: '/logos/grpc.svg',
+    alt: 'pulumi',
+    iconAvailable: false
   },
   {
     name: 'Kafka',
-    id: 11,
+    id: 9,
     icon: SiApachekafka,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
   },
   {
     name: 'NATS',
-    id: 12,
+    id: 10,
     iconPath: '/logos/nats.svg',
     alt: 'nats',
-    iconAvailable: false,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: false
   },
   {
     name: 'RabbitMQ',
-    id: 13,
+    id: 11,
     icon: SiRabbitmq,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
+  },
+  {
+    name: 'Redis',
+    id: 12,
+    icon: DiRedis,
+    iconAvailable: true
   },
   {
     name: 'Docker',
-    id: 14,
+    id: 13,
     icon: SiDocker,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
   },
   {
     name: 'Jenkins',
-    id: 15,
+    id: 14,
     icon: SiJenkins,
-    iconAvailable: true,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    iconAvailable: true
+  },
+  {
+    name: 'AWS',
+    id: 15,
+    icon: SiAmazonaws,
+    iconAvailable: true
   }
 ]
