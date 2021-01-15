@@ -1,6 +1,7 @@
 import React, { MutableRefObject, useRef } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import Head from 'next/head'
 import Header from '../components/header-section/main'
 import Welcome from '../components/welcome-section/main'
 import About from '../components/about-section/main'
@@ -29,26 +30,37 @@ const Home = (): React.ReactElement => {
   useScrollAnimation({ initialValue: 0, refs })
 
   return (
-    <Grid container>
-      <Grid className={pageStyle.headerFixed} container>
-        <Header {...refs} />
+    <>
+      <Head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      <Grid container>
+        <Grid className={pageStyle.headerFixed} container>
+          <Header {...refs} />
+        </Grid>
+        <Grid ref={refs.Welcome} container>
+          <Welcome />
+        </Grid>
+        <Grid ref={refs.About} container>
+          <About />
+        </Grid>
+        <Grid ref={refs.Experience} container>
+          <Experience />
+        </Grid>
+        <Grid ref={refs.Tech} container>
+          <Tech />
+        </Grid>
+        <Grid ref={refs.Contact} container>
+          <Contact />
+        </Grid>
       </Grid>
-      <Grid ref={refs.Welcome} container>
-        <Welcome />
-      </Grid>
-      <Grid ref={refs.About} container>
-        <About />
-      </Grid>
-      <Grid ref={refs.Experience} container>
-        <Experience />
-      </Grid>
-      <Grid ref={refs.Tech} container>
-        <Tech />
-      </Grid>
-      <Grid ref={refs.Contact} container>
-        <Contact />
-      </Grid>
-    </Grid>
+    </>
   )
 }
 
