@@ -19,7 +19,7 @@ const useAboutSectionStyle = makeStyles(theme => ({
      */
     [theme.breakpoints.between('xs', 'md')]: {
       alignItems: 'center',
-      fontSize: '6vmin',
+      fontSize: '5.5vmin',
       height: '75vh',
       paddingLeft: '2vh',
       paddingRight: '2vh'

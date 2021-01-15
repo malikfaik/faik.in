@@ -122,7 +122,7 @@ const useModelBoxStyles = makeStyles(theme => ({
     textAlign: 'justify',
 
     [theme.breakpoints.between('xs', 'md')]: {
-      fontSize: '4vmin',
+      fontSize: '3.5vmin',
       height: '80%'
     }
   }
