@@ -74,7 +74,12 @@ const useHeaderSectionStyle = makeStyles(() => ({
       marginTop: '1.5%',
       paddingBottom: '1.5%',
       userSelect: 'none',
-      width: '100%'
+      width: '100%',
+
+      '& a': {
+        color: 'rgba(0, 0, 0, 0.87)',
+        textDecoration: 'none'
+      }
     }
   },
 

@@ -85,7 +85,8 @@ export const useBgStyle = ({ backgroundOpacity, refs }: BgStyleInput): BgStyle =
   const bgColor = o => `rgba(250, 250, 250, ${o})`
   const [bgStyle, setBgStyle] = useState({ backgroundColor: bgColor(backgroundOpacity) })
   useEffect(() => {
-    window.setInterval(() => updateOnInterval({ setBgStyle, bgColor, bgStyle, refs }), 20)
+    const intervalId = window.setInterval(() => updateOnInterval({ setBgStyle, bgColor, bgStyle, refs }), 20)
+    return () => window.clearInterval(intervalId)
   }, [bgStyle, refs])
 
   return bgStyle

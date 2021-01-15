@@ -64,16 +64,16 @@ const HamburgerNavigationComponent = (headerClasses: Record<string, string>): Re
       <animated.div className={headerClasses.navigationHamburgerItemsWrapper} style={translateMenuItems}>
         <ul className={headerClasses.navigationHamburgerItems}>
           <li role="presentation" onClick={() => onItemClickHandler('About')}>
-            <span>About</span>
+            <a href="#/about">About</a>
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Experience')}>
-            <span>Experience</span>
+            <a href="#/experience">Experience</a>
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Tech')}>
-            <span>Tech</span>
+            <a href="#/tech">Tech</a>
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Contact')}>
-            <span>Contact</span>
+            <a href="#/contact">Contact</a>
           </li>
         </ul>
       </animated.div>
