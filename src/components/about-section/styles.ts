@@ -13,7 +13,7 @@ const useAboutSectionStyle = makeStyles(theme => ({
     paddingRight: '2vmin',
     paddingTop: '2vmin',
     textAlign: 'justify',
-
+    whiteSpace: 'pre-line',
     /**
      * 75% viewport height when device is smaller.
      */

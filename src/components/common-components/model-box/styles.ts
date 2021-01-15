@@ -43,7 +43,8 @@ const useModelBoxStyles = makeStyles(theme => ({
     overflow: 'hidden',
     paddingLeft: '2vmin',
     paddingTop: '2vmin',
-    textAlign: 'center'
+    textAlign: 'center',
+    whiteSpace: 'pre-line'
   },
 
   modelBox: {

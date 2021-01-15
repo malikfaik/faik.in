@@ -1,5 +1,4 @@
 export default {
-  body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Natoque penatibus et magnis dis parturient. Cras semper auctor
-    neque vitae tempus quam pellentesque nec. Tincidunt arcu non sodales neque sodales ut etiam sit amet. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Risus commodo viverra
-    maecenas accumsan lacus vel facilisis volutpat. Scelerisque viverra mauris in aliquam sem fringilla.`
+  body:
+    "I am from Kashmir, India based in Munich, Germany. I started freelancing during later half of my school.\nI believe in being language agnostic, I treat language as a tool and not as a skill, the skill for me is investigating and designing solutions and using the best language available to implement that solution. \nI also put high importance on having fun while you work, I am a human not a robot, I enjoy my work and I make sure everyone else who works with me enjoy their's too."
 }
