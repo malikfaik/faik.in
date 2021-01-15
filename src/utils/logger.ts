@@ -1,7 +1,7 @@
 import pino from 'pino'
 
 const config = {
-  serverUrl: process.env.REACT_APP_API_PATH
+  serverUrl: process.env.LOGGER_URL
 }
 
 const pinoConfig = {

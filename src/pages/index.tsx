@@ -29,7 +29,6 @@ const Home = (): React.ReactElement => {
   }
   useEffect(() => {
     const trackingId = process.env.GAID
-    console.log(trackingId)
     ReactGA.initialize(trackingId)
     ReactGA.set({
       browserVersion: Rdd.fullBrowserVersion,
