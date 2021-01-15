@@ -1,7 +1,9 @@
-import React, { MutableRefObject, useRef } from 'react'
+import React, { MutableRefObject, useRef, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
+import ReactGA from 'react-ga'
+import * as Rdd from 'react-device-detect'
 import Header from '../components/header-section/main'
 import Welcome from '../components/welcome-section/main'
 import About from '../components/about-section/main'
@@ -25,6 +27,19 @@ const Home = (): React.ReactElement => {
     Tech: useRef(null),
     Contact: useRef(null)
   }
+  useEffect(() => {
+    const trackingId = process.env.GAID
+    ReactGA.initialize(trackingId)
+    ReactGA.set({
+      browserVersion: Rdd.fullBrowserVersion,
+      browserName: Rdd.browserName,
+      mobileVendor: Rdd.mobileVendor,
+      mobileModel: Rdd.mobileModel,
+      engineName: Rdd.engineName,
+      deviceType: Rdd.deviceType,
+      userAgent: Rdd.getUA
+    })
+  })
 
   const pageStyle = usePageStyle()
   useScrollAnimation({ initialValue: 0, refs })
