@@ -52,18 +52,24 @@ const Contact = (): React.ReactElement => {
 
           <Grid {...onHover({ scaleTo: 1.2, currentIndex: 0 })} item {...fullLengthColumnSize}>
             <div className={contactClasses.emailContact}>
-              <AnimatedEmail style={scaleSprings[0]} className={contactClasses.contactEmailIcon} />
-              <span>hi@faik.in</span>
+              <a href="mailto:hi@faik.in">
+                <AnimatedEmail style={scaleSprings[0]} className={contactClasses.contactEmailIcon} />
+                <span>hi@faik.in</span>
+              </a>
             </div>
           </Grid>
 
           <Grid item {...fullLengthColumnSize}>
             <div className={contactClasses.contactSocialIconWrapper}>
-              <AnimatedLinkedin style={scaleSprings[1]} {...onHover({ scaleTo: 1.2, currentIndex: 1 })} className={contactClasses.contactSocialIcon} />
-
-              <AnimatedTwitter style={scaleSprings[2]} {...onHover({ scaleTo: 1.2, currentIndex: 2 })} className={contactClasses.contactSocialIcon} />
-
-              <AnimatedGithub {...onHover({ scaleTo: 1.2, currentIndex: 3 })} style={scaleSprings[3]} className={contactClasses.contactSocialIcon} />
+              <a href="https://www.linkedin.com/in/malikfaik/">
+                <AnimatedLinkedin style={scaleSprings[1]} {...onHover({ scaleTo: 1.2, currentIndex: 1 })} className={contactClasses.contactSocialIcon} />
+              </a>
+              <a href="https://twitter.com/malikfaik">
+                <AnimatedTwitter style={scaleSprings[2]} {...onHover({ scaleTo: 1.2, currentIndex: 2 })} className={contactClasses.contactSocialIcon} />
+              </a>
+              <a href="https://github.com/malikfaik">
+                <AnimatedGithub {...onHover({ scaleTo: 1.2, currentIndex: 3 })} style={scaleSprings[3]} className={contactClasses.contactSocialIcon} />
+              </a>
             </div>
           </Grid>
         </div>

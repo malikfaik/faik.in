@@ -113,6 +113,11 @@ const useContactSectionStyle = makeStyles(theme => ({
     marginLeft: '5.5%',
     marginTop: '10%',
 
+    '& a': {
+      color: 'rgba(0, 0, 0, 0.87)',
+      textDecoration: 'none'
+    },
+
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '6vmin'
     }
@@ -121,6 +126,11 @@ const useContactSectionStyle = makeStyles(theme => ({
   contactSocialIconWrapper: {
     cursor: 'pointer',
     marginTop: '10%',
+
+    '& a': {
+      color: 'rgba(0, 0, 0, 0.87)',
+      textDecoration: 'none'
+    },
 
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '6vmin'
