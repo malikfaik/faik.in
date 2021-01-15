@@ -8,7 +8,7 @@ export default [
     description:
       "I have been working at Trivago as a cross functional engineer, primarily handling Back-end and Dev-Ops topics.\nMy main work involves shipping new features and supporting the team with maintaince or sometimes upgrade ( you know it's a rewrite xD ) of legacy features or services in an agile environment, foster knowledge sharing within the team on different topics and collaborating with different teams while developing new features.",
     from: new Date('01-15-2020'),
-    to: 0
+    to: null
   },
   {
     name: 'Infino',
@@ -41,6 +41,6 @@ export default [
     description:
       "I have been freelancing for almost 7 years now.\nIn the freelancing space, my primary work involves... ( I am kidding ), it's freelancing, you do whatever pays xD, but still, I have worked on developing websites, apps, scripts, some infrastructure things here and there, pretty much everything tech related that comes my way, even graphic designing at one point xD ( I do have a sense of design, atleast good enough for a Software Engineer ).",
     from: new Date('01-01-2013'),
-    to: 0
+    to: null
   }
 ]

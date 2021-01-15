@@ -1,6 +1,6 @@
 export type DateStringInput = {
   dateFrom: Date
-  dateTo: Date | number
+  dateTo: Date | null
 }
 
 /**
@@ -10,12 +10,12 @@ export type DateStringInput = {
  * @param dateTo "from" field from the data file
  */
 export const getDateString = ({ dateFrom, dateTo }: DateStringInput): string => {
-  const yeFrom = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(dateFrom).slice(-2)
-  const moFrom = new Intl.DateTimeFormat('en', { month: 'short' }).format(dateFrom)
+  const yeFrom = dateFrom.toLocaleString('en', { year: 'numeric' }).slice(-2)
+  const moFrom = dateFrom.toLocaleString('en', { month: 'short' })
   let formatedToDate = 'present'
-  if (dateTo !== 0) {
-    const yeTo = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(dateTo).slice(-2)
-    const moTo = new Intl.DateTimeFormat('en', { month: 'short' }).format(dateTo)
+  if (dateTo !== null) {
+    const yeTo = dateTo.toLocaleString('en', { year: 'numeric' }).slice(-2)
+    const moTo = dateTo.toLocaleString('en', { month: 'short' })
     formatedToDate = `${moTo} ${yeTo}'`
   }
   return `${moFrom} ${yeFrom}' - ${formatedToDate}`
