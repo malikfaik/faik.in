@@ -42,10 +42,10 @@ const logoGridSize: SectionColumn = {
 const DesktopNavigationComponent = (headerClasses: Record<string, string>): React.ReactElement => {
   return (
     <div className={headerClasses.navigationWrapper}>
-      <HoverUnderline onClick={() => animateScrollToTarget('About')} anchorClass={headerClasses.navigationText} href="#/about" linkText="About" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Experience')} anchorClass={headerClasses.navigationText} href="#/experience" linkText="Experience" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Tech')} anchorClass={headerClasses.navigationText} href="#/tech" linkText="Tech" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Contact')} anchorClass={headerClasses.navigationText} href="#/contact" linkText="Contact" />
+      <HoverUnderline onClick={() => animateScrollToTarget('About')} anchorClass={headerClasses.navigationText} linkText="About" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Experience')} anchorClass={headerClasses.navigationText} linkText="Experience" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Tech')} anchorClass={headerClasses.navigationText} linkText="Tech" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Contact')} anchorClass={headerClasses.navigationText} linkText="Contact" />
     </div>
   )
 }
@@ -64,16 +64,16 @@ const HamburgerNavigationComponent = (headerClasses: Record<string, string>): Re
       <animated.div className={headerClasses.navigationHamburgerItemsWrapper} style={translateMenuItems}>
         <ul className={headerClasses.navigationHamburgerItems}>
           <li role="presentation" onClick={() => onItemClickHandler('About')}>
-            <a href="#/about">About</a>
+            About
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Experience')}>
-            <a href="#/experience">Experience</a>
+            Experience
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Tech')}>
-            <a href="#/tech">Tech</a>
+            Tech
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Contact')}>
-            <a href="#/contact">Contact</a>
+            Contact
           </li>
         </ul>
       </animated.div>
@@ -114,7 +114,9 @@ const Header = (refs: BgStyleInput['refs']): React.ReactElement => {
     <>
       <ToggledWhiteShade refs={refs} headerClasses={headerClasses} />
       <Grid item {...logoGridSize}>
-        <img src="/logo.svg" className={headerClasses.logo} alt="logo" />
+        <button type="button" onClick={() => animateScrollToTarget('Welcome')}>
+          <img src="/logo.svg" className={headerClasses.logo} alt="logo" />
+        </button>
       </Grid>
 
       <Grid item {...navigationGridSize}>

@@ -1,17 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles'
 
-const useHeaderSectionStyle = makeStyles(() => ({
+const useHeaderSectionStyle = makeStyles(theme => ({
   logo: {
     float: 'left',
     height: '5vmin',
     paddingLeft: '1vmin',
     position: 'absolute',
     top: '15%',
-    zIndex: 2
+    zIndex: 2,
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      height: '10vmin'
+    }
   },
 
   navigationText: {
-    '& a': {
+    '& button': {
       color: 'rgba(0, 0, 0, 0.87)',
       fontFamily: `'Quicksand', sans-serif`,
       fontSize: '2vmin',
@@ -74,12 +78,7 @@ const useHeaderSectionStyle = makeStyles(() => ({
       marginTop: '1.5%',
       paddingBottom: '1.5%',
       userSelect: 'none',
-      width: '100%',
-
-      '& a': {
-        color: 'rgba(0, 0, 0, 0.87)',
-        textDecoration: 'none'
-      }
+      width: '100%'
     }
   },
 
