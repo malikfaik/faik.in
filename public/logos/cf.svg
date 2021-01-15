@@ -13,7 +13,7 @@
    preserveAspectRatio="xMidYMid"
    version="1.1"
    id="svg82"
-   sodipodi:docname="aws-cloudformation-logo-svg-vector.svg"
+   sodipodi:docname="cf.svg"
    inkscape:version="1.0.1 (1.0.1+r74)">
   <metadata
      id="metadata88">
@@ -38,49 +38,23 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1025"
+     inkscape:window-height="1043"
      id="namedview84"
      showgrid="false"
-     inkscape:zoom="0.336"
-     inkscape:cx="1025.5"
-     inkscape:cy="1250"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:zoom="0.168"
+     inkscape:cx="-79.873843"
+     inkscape:cy="1923.3036"
+     inkscape:window-x="1080"
+     inkscape:window-y="427"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg82" />
-  <path
-     d="M16.491 215.53l2.176 2.47 109.915 31.157.498-19.313-76.98-19.318-3.767-1.359-31.842 6.363"
-     fill="#B7CA9D"
-     id="path68"
-     style="fill:#000000" />
-  <path
-     d="M239.505 215.53L127.25 253l-.334-23.156 76.979-19.318 3.355-3.776 32.255 8.78"
-     fill="#B7CA9D"
-     id="path70"
-     style="fill:#000000" />
-  <path
-     d="M126.916 83.165l76.979 17.941L237.75 99.5l1.755-3.393L132.25 57.5l-5.334 25.665"
-     fill="#3C4929"
-     id="path72"
-     style="fill:#000000" />
-  <path
-     d="M52.1 210.526l-35.609 5.004-.991-3.697V100l.991-3.893L48.667 98.5l3.433 2.61v109.416"
-     fill="#759C3E"
-     id="path74"
-     style="fill:#000000" />
-  <path
-     d="M129.08 83.165L52.1 101.106l-35.609-4.999L17.833 94l110.749-31.52.498 20.685"
-     fill="#3C4929"
-     id="path76"
-     style="fill:#000000" />
-  <path
-     d="M127.846 0L0 64.531l.061 182.613 127.785 64.497 1.904-2.891v-305L127.846 0zM90.462 237.73l-73.971-22.2V96.107l73.971-22.192V237.73zM203.895 210.526l35.61 5.004L241.5 212V99.5l-1.995-3.393-35.61 5.003v109.416"
-     fill="#4B612C"
-     id="path78"
-     style="fill:#000000" />
-  <path
-     d="M127.846 311.641l128.093-64.493L256 64.536 127.846 0v311.641zm37.687-237.726l73.972 22.192V215.53l-73.972 22.2V73.915z"
-     fill="#759C3E"
-     id="path80"
-     style="fill:#000000" />
+     inkscape:current-layer="g843"
+     inkscape:document-rotation="0" />
+  <g
+     id="g843">
+    <path
+       id="path68"
+       style="fill:#212121;fill-opacity:1;stroke-width:8.01172"
+       d="M 1024.2656,0.171875 0,517.17578 0.48828125,1980.2207 1024.2656,2496.9512 2050.5117,1980.252 2051,517.2168 Z M 724.75586,738.57422 V 1763.9746 l -307.3457,-77.1269 V 810.23633 l -0.0508,-0.0391 0.0508,0.008 z m 601.44724,0 307.3457,71.63086 0.1719,-0.008 -0.1719,0.0391 v 876.61137 l -307.3457,77.1289 z"
+       transform="matrix(0.12481716,0,0,0.12481716,0,-0.02145295)" />
+  </g>
 </svg>
