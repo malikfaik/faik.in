@@ -6,7 +6,7 @@ const useAboutSectionStyle = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     fontFamily: `'Quicksand', sans-serif`,
-    fontSize: '4vmin',
+    fontSize: '3vmin',
     fontWeight: 400,
     height: '100vh',
     overflow: 'hidden',
@@ -19,7 +19,7 @@ const useAboutSectionStyle = makeStyles(theme => ({
      */
     [theme.breakpoints.between('xs', 'md')]: {
       alignItems: 'center',
-      fontSize: '5.5vmin',
+      fontSize: '4.5vmin',
       height: '75vh',
       paddingLeft: '2vh',
       paddingRight: '2vh'
