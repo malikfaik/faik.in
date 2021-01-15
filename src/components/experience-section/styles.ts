@@ -151,7 +151,7 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     display: 'inline-block',
     paddingLeft: '2vmin',
 
-    '& a': {
+    '& button': {
       color: 'rgba(0, 0, 0, 0.87)',
       fontSize: '2vmin',
       fontWeight: '700',

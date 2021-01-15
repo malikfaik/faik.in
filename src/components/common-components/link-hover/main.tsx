@@ -8,7 +8,6 @@ import useLinkHoverStyles from './styles'
 type LinkType = {
   anchorClass: string
   linkText: string
-  href: string
   onClick?: () => void
 }
 
@@ -20,11 +19,11 @@ type LinkType = {
  * @param href
  * @param onClick
  */
-const LinkComponent = sizeMe()(({ linkText, href, onClick }: LinkType) => {
+const LinkComponent = sizeMe()(({ linkText, onClick }: LinkType) => {
   return (
-    <a onClick={onClick} href={href}>
+    <button type="button" onClick={onClick}>
       {linkText}
-    </a>
+    </button>
   )
 })
 

@@ -142,7 +142,7 @@ const useContactSectionStyle = makeStyles(theme => ({
   },
 
   footerName: {
-    '& a': {
+    '& button': {
       color: 'rgba(0, 0, 0, 0.87)',
       textDecoration: 'none'
     }

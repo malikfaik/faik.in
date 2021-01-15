@@ -47,7 +47,6 @@ const ExperienceList = ({ experienceClasses }: ExperienceListInput): React.React
                   })
                 }
                 anchorClass={experienceClasses.experienceMore}
-                href="#/experience"
                 linkText="more+"
               />
             </div>
