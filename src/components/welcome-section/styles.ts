@@ -13,7 +13,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   whiteShade: {
     backgroundColor: '#fff',
     height: '100vh',
-    opacity: 0.65,
+    opacity: 0.7,
     position: 'absolute',
     width: '100%',
     zIndex: -1
@@ -30,7 +30,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
 
   nameText: {
     fontSize: '10vmin',
-    fontWeight: 'lighter',
+    fontWeight: 500,
     zIndex: -1,
 
     '& span': {
@@ -38,12 +38,12 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
       position: 'relative',
 
       '&::before, &::after': {
-        borderTop: '0.1rem solid rgba(0, 0, 0, 0.87)',
+        borderTop: '0.5vmin solid rgba(0, 0, 0, 0.87)',
         content: `''`,
         height: '1vmin',
         marginTop: '7vmin',
         position: 'absolute',
-        width: '40%'
+        width: '30%'
       },
 
       '&::before': {
@@ -58,20 +58,6 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     }
   },
 
-  greetingText: {
-    fontSize: '4vmin',
-    fontStyle: 'italic',
-    fontWeight: 500,
-    marginTop: '-5%',
-    position: 'absolute',
-    textAlign: 'center',
-    zIndex: -1,
-
-    [theme.breakpoints.between('xs', 'md')]: {
-      marginTop: '-10%'
-    }
-  },
-
   downArrow: {
     cursor: 'pointer',
     fontSize: '6vmin',
@@ -82,6 +68,24 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
       fontSize: '10vmin',
       top: '93%'
     }
+  },
+
+  currentLocation: {
+    fontSize: '3vmin',
+    fontWeight: 600,
+    position: 'absolute',
+    top: '57%',
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      fontSize: '3.5vmin',
+      top: '55%'
+    }
+  },
+
+  locationItem: {
+    left: '-15%',
+    position: 'absolute',
+    top: '15%'
   }
 }))
 
