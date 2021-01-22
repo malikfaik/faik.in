@@ -17,7 +17,7 @@ export default [
     img: '/logos/infino.svg',
     className: 'bullet',
     description:
-      'I Worked at Infino as a Lead, my work primarily involved building the entire Back-end from scratch.\nI also mentored / supported fellow engineers on different Back-end Topics, collaborated with different tech providers for integration.\nBeing a payments related start-up, the work had to be scrutinized thoroughly to be complaint with PCI and other regulations',
+      'I worked at Infino as a Lead, my work primarily involved building the entire Back-end from scratch.\nI also mentored / supported fellow engineers on different Back-end Topics, collaborated with different tech providers for integration.\nBeing a payments related start-up, the work had to be scrutinized thoroughly to be complaint with PCI and other regulations',
     from: new Date('01-01-2019'.replace(/-/g, '/')),
     to: new Date('12-01-2019'.replace(/-/g, '/'))
   },
@@ -28,7 +28,7 @@ export default [
     img: '/logos/accenture.svg',
     className: 'bullet',
     description:
-      'I Worked at Accenture as a Contractor, primarily handling data engineering topics.\nThe main work involved building new ETL pipelines and integration for Analytics, migrating older pipelines to a more robust and cleaner and testable alternative, building solutions for web scraping and designing performant schemas for databases.',
+      'I worked at Accenture as a Contractor, primarily handling data engineering topics.\nThe main work involved building new ETL pipelines and integration for Analytics, migrating older pipelines to a more robust and cleaner and testable alternative, building solutions for web scraping and designing performant schemas for databases.',
     from: new Date('05-15-2018'.replace(/-/g, '/')),
     to: new Date('09-15-2018'.replace(/-/g, '/'))
   },
