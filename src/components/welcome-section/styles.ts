@@ -13,7 +13,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   whiteShade: {
     backgroundColor: '#fff',
     height: '100vh',
-    opacity: 0.5,
+    opacity: 0.65,
     position: 'absolute',
     width: '100%',
     zIndex: -1
