@@ -29,8 +29,9 @@ export const onClose = (): void => {
 }
 
 export const useAnimationHook = (): AnimationHook => {
-  const [animatedStyle, setStyleSpring] = useSpring(() => ({ scale: 0, opacity: 0 }))
   const [modelData, setModelData] = useState({ img: null, description: null, name: null, duration: null })
+  const [animatedStyle, setStyleSpring] = useSpring(() => ({ scale: 0, opacity: 0 }))
+
   animationHook.setStyleSpring = setStyleSpring
   animationHook.setModelData = setModelData
   return {
