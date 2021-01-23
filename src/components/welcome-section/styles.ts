@@ -78,7 +78,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
 
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '3.5vmin',
-      top: '55%'
+      top: '55.5%'
     }
   },
 
