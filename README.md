@@ -1,30 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website
 
-## Getting Started
+The single page web app is based on React.js and Next.js
 
-First, run the development server:
+## How to run
 
-```bash
-npm run dev
-# or
-yarn dev
+- Install `yarn`
+- Run `yarn install`
+- Run `yarn dev`
+
+## Files
+
+All the code lives inside `/src` folder.
+
+We have following subfolders `components`, `config`, `pages` and `utils`
+
+```txt
+src
+├── components
+├── config
+├── pages
+└── utils
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Components
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+All the individual components live here.
 
-## Learn More
+```txt
+src/components
+├── about-section
+├── common-components
+│   ├── link-hover
+│   ├── model-box
+│   └── on-scroll-spring
+├── contact-section
+├── experience-section
+├── header-section
+├── tech-section
+└── welcome-section
+```
 
-To learn more about Next.js, take a look at the following resources:
+The components follow the following file structure.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```txt
+src/components/{component}
+├── main.tsx
+├── content.ts
+├── styles.ts
+└── helpers.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `main.tsx`: Contains jsx for the component.
+- `content.ts`: Contains content for the component.
+- `styles.ts`: Contains JSS style for the component.
+- `helper.ts`: Contains helper functions for the component.
 
-## Deploy on Vercel
+Each section of the app has it's own individual component.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+There are certain components that are shared between other components, these kind of components lie within `common-components`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Pages
+
+The indiviual pages of the app lie within the `src/pages`, in our case just a single page i.e `index.tsx`
+
+### Config
+
+All the configuration for the app lies within `src/config`, e.g `types` etc.
+
+### Utils
+
+All the global utils lie here, including our `anlaytics` helper and `logger`.
+
+## Packages
+
+We use the following packages within the app.
+
+- `@material-ui/core@4.11.2`: We use this package to implement responsive design.
+- `next@10.0.3`: We use this package for SSR using next.
+- `pino@6.9.0`: We use this package for logging.
+- `prop-types@15.7.2`: We use this package for prop validation.
+- `react-icons@4.1.0:` We use this package for icons.
+- `react-device-detect@1.15.0`: We use this package to track user devices.
+- `react-spring@9.0.0-rc.3`: We use this package for animations.
+- `react-sizeme@2.6.12`: We this package to update certain elements on screen resize.
+- React Packages:
+
+  ```json
+    "react-dom": "17.0.1",
+    "react": "17.0.1",
+  ```
