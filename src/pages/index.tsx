@@ -58,7 +58,6 @@ const Home = (): React.ReactElement => {
           name="description"
           content="I am an experienced developer having worked in analytics, payment, travel and freelancing space for more than 6 years. I have experience working on Micro-Services Architecture, gRPC, Restful APIs, GraphQL among other things. I love experimenting to make products better and to learn new things along the way."
         />
-        <meta name="robots" content="noindex,nofollow" />
       </Head>
       <Grid container>
         <Grid className={pageStyle.headerFixed} container>
