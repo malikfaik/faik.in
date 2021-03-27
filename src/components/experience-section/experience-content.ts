@@ -1,19 +1,29 @@
 export default [
   {
+    name: 'Joyn',
+    alt: 'joyn',
+    id: '1',
+    img: '/logos/joyn.svg',
+    className: 'bullet',
+    description:'Coming soon!',
+    from: new Date('02-01-2021'.replace(/-/g, '/')),
+    to: null
+  },
+  {
     name: 'Trivago',
     alt: 'trivago',
-    id: '1',
+    id: '2',
     img: '/logos/trivago.svg',
     className: 'bullet',
     description:
       'I have been working at Trivago as a cross functional engineer, primarily handling Back-end and Dev-Ops topics.\nMy main work involves shipping new features and supporting the team with maintaince or sometimes upgrade of legacy features or services in an agile environment, foster knowledge sharing within the team on different topics and collaborating with different teams while developing new features.',
     from: new Date('01-15-2020'.replace(/-/g, '/')),
-    to: null
+    to: new Date('02-01-2021'.replace(/-/g, '/'))
   },
   {
     name: 'Infino',
     alt: 'infino',
-    id: '2',
+    id: '3',
     img: '/logos/infino.svg',
     className: 'bullet',
     description:
@@ -24,7 +34,7 @@ export default [
   {
     name: 'Accenture',
     alt: 'accenture',
-    id: '3',
+    id: '4',
     img: '/logos/accenture.svg',
     className: 'bullet',
     description:
@@ -35,7 +45,7 @@ export default [
   {
     name: 'Freelance',
     alt: 'freelance',
-    id: '4',
+    id: '5',
     img: '/logos/personal.svg',
     className: 'bullet',
     description:
