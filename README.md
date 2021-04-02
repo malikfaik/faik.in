@@ -61,7 +61,7 @@ There are certain components that are shared between other components, these kin
 
 ### Pages
 
-The indiviual pages of the app lie within the `src/pages`, in our case just a single page i.e `index.tsx`
+The indiviual pages of the app lie within the `src/pages`, in our case just a single page i.e `index.tsx`.
 
 ### Config
 
