@@ -5,7 +5,7 @@ export default [
     id: '1',
     img: '/logos/joyn.svg',
     className: 'bullet',
-    description:'Coming soon!',
+    description:'I currently working at Joyn as a Back-end Engineer with some inclination towards DevOps within the content ingestion team, My work primarily involves developing high throughput services and pipelines for content ingestion, improving existing pipelines by making them more leaner and maintainable.',
     from: new Date('02-01-2021'.replace(/-/g, '/')),
     to: null
   },
@@ -16,7 +16,7 @@ export default [
     img: '/logos/trivago.svg',
     className: 'bullet',
     description:
-      'I have been working at Trivago as a cross functional engineer, primarily handling Back-end and Dev-Ops topics.\nMy main work involves shipping new features and supporting the team with maintaince or sometimes upgrade of legacy features or services in an agile environment, foster knowledge sharing within the team on different topics and collaborating with different teams while developing new features.',
+      'I was working at Trivago as a cross functional engineer, primarily handling Back-end and Dev-Ops topics.\nMy main work involves shipping new features and supporting the team with maintaince or sometimes upgrade of legacy features or services in an agile environment, foster knowledge sharing within the team on different topics and collaborating with different teams while developing new features.',
     from: new Date('01-15-2020'.replace(/-/g, '/')),
     to: new Date('02-01-2021'.replace(/-/g, '/'))
   },
