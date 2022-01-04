@@ -6,7 +6,6 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     objectFit: 'cover',
     overflow: 'hidden',
     position: 'absolute',
-    objectPosition: '15% 50%',
     width: '100%',
     zIndex: -2
   },
