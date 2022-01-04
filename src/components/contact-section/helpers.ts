@@ -1,4 +1,4 @@
-import { SpringStartFn, useSprings, SpringValue } from 'react-spring'
+import { SpringRef, useSprings, SpringValue } from 'react-spring'
 
 export type OnHover = {
   onMouseEnter: () => void
@@ -19,7 +19,7 @@ export type AnimationHook = { scale: SpringValue<number> }[]
 
 type SetAnimationInput = {
   scale: number
-  setScaleSprings: SpringStartFn<{ scale: number }>
+  setScaleSprings: SpringRef<{ scale: number }>
   currentIndex: number
 }
 
