@@ -1,8 +1,8 @@
 import React from 'react'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import './app.css'
+import { AppProps } from 'next/app'
 
 const generateClassName = createGenerateClassName({
   disableGlobal: false,
