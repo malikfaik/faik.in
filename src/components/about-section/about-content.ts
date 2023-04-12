@@ -1,4 +1,6 @@
 export default {
   body:
-    'I am an experienced engineer having worked in several different spaces over the last 7-8 years, my core expertise is in Back-end and DevOps but I dabble in Front-end as well every now and then. Currently, I am working with Joyn Gmbh in Munich, helping them make content pipelines more robust, performant and generic, and also supporting our content partners like Prosieben Sat 1., Discovery etc, to effectively use these pipelines to deliver content to our users.\nWhen I am not upgrading legacy code, designing new systems or tinkering with my pet projects, I am either travelling or just hacking on 3d printers, electronics to build something cool.'
+    'I am a seasoned engineer with 7-8 years of experience in various domains, specializing in back-end development and DevOps. However, I also have a knack for front-end development. Currently, I am contributing to Joyn Gmbh in Munich, where I am strengthening their content pipelines to be more robust, high-performing, and versatile. Additionally, I assist our content partners such as Prosieben Sat 1., Discovery, etc. in efficiently utilizing these pipelines to provide content to our users.
+
+When I am not upgrading existing code or devising new systems, I enjoy pursuing my hobbies of travelling or indulging in DIY projects like building 3D printers or tinkering with electronics to create innovative solutions.'
 }
