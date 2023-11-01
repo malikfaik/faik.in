@@ -16,6 +16,18 @@ const usePageStyle = makeStyles({
   headerFixed: {
     position: 'fixed',
     zIndex: 2
+  },
+  aboutSection: {
+    backgroundColor: '#f8edea'
+  },
+  experienceSection: {
+    backgroundColor: '#fbefd5'
+  },
+  techSection: {
+    backgroundColor: '#eae6dc'
+  },
+  contactSection: {
+    backgroundColor: '#f5f1cf'
   }
 })
 
@@ -28,16 +40,15 @@ const Home = (): React.ReactElement => {
     Contact: useRef(null)
   }
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production')
-      pageview(window.location.pathname, {
-        browserVersion: Rdd.fullBrowserVersion,
-        browserName: Rdd.browserName,
-        mobileVendor: Rdd.mobileVendor,
-        mobileModel: Rdd.mobileModel,
-        engineName: Rdd.engineName,
-        deviceType: Rdd.deviceType,
-        userAgent: Rdd.getUA
-      })
+    pageview(window.location.pathname, {
+      browserVersion: Rdd.fullBrowserVersion,
+      browserName: Rdd.browserName,
+      mobileVendor: Rdd.mobileVendor,
+      mobileModel: Rdd.mobileModel,
+      engineName: Rdd.engineName,
+      deviceType: Rdd.deviceType,
+      userAgent: Rdd.getUA
+    })
   })
 
   const pageStyle = usePageStyle()
@@ -46,7 +57,7 @@ const Home = (): React.ReactElement => {
   return (
     <>
       <Head>
-        <title>Faik Malik - Personal Page</title>
+        <title>Faik Malik - A backend and devOps Engineer</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -66,16 +77,16 @@ const Home = (): React.ReactElement => {
         <Grid ref={refs.Welcome} container>
           <Welcome />
         </Grid>
-        <Grid ref={refs.About} container>
+        <Grid ref={refs.About} className={pageStyle.aboutSection} container>
           <About />
         </Grid>
-        <Grid ref={refs.Experience} container>
+        <Grid ref={refs.Experience} className={pageStyle.experienceSection} container>
           <Experience />
         </Grid>
-        <Grid ref={refs.Tech} container>
+        <Grid ref={refs.Tech} className={pageStyle.techSection} container>
           <Tech />
         </Grid>
-        <Grid ref={refs.Contact} container>
+        <Grid ref={refs.Contact} className={pageStyle.contactSection} container>
           <Contact />
         </Grid>
       </Grid>

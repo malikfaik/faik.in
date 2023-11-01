@@ -5,7 +5,7 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Manrope', sans-serif`,
     fontSize: '4vmin',
     fontWeight: 400,
     height: '100vh',
@@ -30,7 +30,8 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Pixelify Sans', sans-serif`,
+    opacity: '0.7',
     fontSize: '15vmin',
     fontWeight: 100,
     height: '100vh',
@@ -51,7 +52,7 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     marginTop: '9.3vmin',
 
     '& li': {
-      fontFamily: `'Quicksand', sans-serif`,
+      fontFamily: `'Manrope', sans-serif`,
       margin: 0,
       paddingBottom: '8vmin',
       paddingLeft: '8vmin',
@@ -129,16 +130,18 @@ const useExperienceSectionStyle = makeStyles(theme => ({
     float: 'left',
     marginTop: '-1.5vmin',
     paddingLeft: '3vmin',
+    fontSize: '3vmin',
 
     [theme.breakpoints.between('xs', 'md')]: {
-      marginTop: '-1.1vmin'
+      fontSize: '5vmin',
+      marginTop: '-0.4vmin'
     }
   },
 
   experienceDuration: {
     float: 'left',
     fontSize: '2vmin',
-    marginTop: '-1.6vmin',
+    marginTop: '-2.5vmin',
     paddingLeft: '2vmin',
 
     [theme.breakpoints.between('xs', 'md')]: {

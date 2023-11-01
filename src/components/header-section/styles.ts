@@ -17,7 +17,7 @@ const useHeaderSectionStyle = makeStyles(theme => ({
   navigationText: {
     '& button': {
       color: 'rgba(0, 0, 0, 0.87)',
-      fontFamily: `'Quicksand', sans-serif`,
+      fontFamily: `'Manrope', sans-serif`,
       fontSize: '2vmin',
       fontWeight: 600,
       textDecoration: 'none'
@@ -64,7 +64,7 @@ const useHeaderSectionStyle = makeStyles(theme => ({
   },
 
   navigationHamburgerItems: {
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Manrope', sans-serif`,
     fontSize: '4vmin',
     fontWeight: 400,
     listStyleType: 'none',
