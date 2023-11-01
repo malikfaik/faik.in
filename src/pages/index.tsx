@@ -47,7 +47,8 @@ const Home = (): React.ReactElement => {
       mobileModel: Rdd.mobileModel,
       engineName: Rdd.engineName,
       deviceType: Rdd.deviceType,
-      userAgent: Rdd.getUA
+      userAgent: Rdd.getUA,
+      referrer: document.referrer
     })
   })
 
