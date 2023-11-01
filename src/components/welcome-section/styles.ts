@@ -8,7 +8,11 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     overflow: 'hidden',
     position: 'absolute',
     width: '100%',
-    zIndex: -2
+    zIndex: -2,
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      objectPosition: '70% 30%'
+    }
   },
 
   whiteShade: {
@@ -24,7 +28,6 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     fontFamily: `'Pixelify Sans', sans-serif`,
-    // fontFamily: `'Manrope', sans-serif`,
     height: '100vh',
     justifyContent: 'center',
     width: '100%'
@@ -82,7 +85,6 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     fontFamily: `'Pixelify Sans', sans-serif`,
     fontSize: '2vmin',
     opacity: '0.7',
-    // color: 'red',
     fontWeight: 600,
     position: 'absolute',
     top: '56%',
