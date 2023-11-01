@@ -42,7 +42,7 @@ const Contact = (): React.ReactElement => {
         <div className={contactClasses.contactBodyWrapper}>
           <Grid item {...fullLengthColumnSize}>
             <div className={contactClasses.greetingText}>
-              <span>Reach out for a quick hello!</span>
+              <span>Reach out to say hello!</span>
             </div>
           </Grid>
 
