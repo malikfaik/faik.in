@@ -59,6 +59,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     cursor: 'pointer',
     fontSize: '6vmin',
     position: 'absolute',
+    opacity: '0.7',
     top: '90%',
 
     [theme.breakpoints.between('xs', 'md')]: {
