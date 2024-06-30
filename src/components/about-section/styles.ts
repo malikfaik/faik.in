@@ -5,12 +5,12 @@ const useAboutSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Manrope', sans-serif`,
     fontSize: '3vmin',
     fontWeight: 400,
     height: '100vh',
     overflow: 'hidden',
-    paddingRight: '2vmin',
+    paddingRight: '7vmin',
     paddingTop: '2vmin',
     textAlign: 'justify',
     whiteSpace: 'pre-line',
@@ -19,10 +19,10 @@ const useAboutSectionStyle = makeStyles(theme => ({
      */
     [theme.breakpoints.between('xs', 'md')]: {
       alignItems: 'center',
-      fontSize: '4.5vmin',
+      fontSize: '3.8vmin',
       height: '75vh',
-      paddingLeft: '2vh',
-      paddingRight: '2vh'
+      paddingLeft: '6vh',
+      paddingRight: '6vh'
     }
   },
 
@@ -30,9 +30,10 @@ const useAboutSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    opacity: '0.7',
+    fontFamily: `'Pixelify Sans', sans-serif`,
     fontSize: '15vmin',
-    fontWeight: 100,
+    fontWeight: 500,
     height: '100vh',
     justifyContent: 'center',
 
