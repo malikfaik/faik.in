@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useModelBoxStyles = makeStyles(theme => ({
   modelBoxWrapper: {
-    backgroundColor: 'rgba(250,250,250,0.7)',
+    backgroundColor: 'rgba(251, 239, 213, 0.7)',
     bottom: 0,
     height: '100vh',
     left: 0,
@@ -48,7 +48,7 @@ const useModelBoxStyles = makeStyles(theme => ({
   },
 
   modelBox: {
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(251, 239, 213, 1)',
     bottom: 0,
     height: '70vh',
     left: 0,

@@ -54,10 +54,29 @@ type UpdateOnScrollInput = {
 const updateOnInterval = ({ setBgStyle, bgColor, bgStyle, refs }: UpdateOnScrollInput): void => {
   const getTopForElement = element => window.scrollY + element.getBoundingClientRect().top
 
-  const boundries = {
+  const boundaries = {
     welcome: {
       upper: getTopForElement(refs.Welcome.current),
-      bottom: getTopForElement(refs.About.current)
+      bottom: getTopForElement(refs.About.current),
+      color: 'rgba(250, 250, 250, 0)'
+    },
+    about: {
+      upper: getTopForElement(refs.About.current),
+      bottom: getTopForElement(refs.Experience.current),
+      color: 'rgba(248, 237, 234, 0.7)'
+    },
+    experience: {
+      upper: getTopForElement(refs.Experience.current),
+      bottom: getTopForElement(refs.Tech.current),
+      color: 'rgba(251, 239, 213, 0.7)'
+    },
+    tech: {
+      upper: getTopForElement(refs.Tech.current),
+      bottom: getTopForElement(refs.Contact.current),
+      color: 'rgba(234, 230, 220, 0.7)'
+    },
+    contact: {
+      color: 'rgba(245, 241, 207, 0.7)'
     }
   }
 
@@ -65,13 +84,23 @@ const updateOnInterval = ({ setBgStyle, bgColor, bgStyle, refs }: UpdateOnScroll
    * Had to do it this way to not re-render multiple times, we just need to render two times when top > about section top (only one time)
    * and when top < about section top ( only one time)
    */
-  const changeBgToOpacity = window.scrollY > boundries.welcome.bottom && bgStyle.backgroundColor === bgColor(0)
-  const changeBgToDefault = window.scrollY <= boundries.welcome.bottom && bgStyle.backgroundColor === bgColor(0.7)
+  const changeBgForAbout = window.scrollY > boundaries.welcome.bottom && window.scrollY <= boundaries.about.bottom && bgStyle.backgroundColor !== boundaries.about.color
+  const changeBgForExperience = window.scrollY > boundaries.about.bottom && window.scrollY <= boundaries.experience.bottom && bgStyle.backgroundColor !== boundaries.experience.color
+  const changeBgForTech = window.scrollY > boundaries.experience.bottom && window.scrollY < boundaries.tech.bottom && bgStyle.backgroundColor !== boundaries.tech.color
+  const changeBgForContact = window.scrollY >= boundaries.tech.bottom && bgStyle.backgroundColor !== boundaries.contact.color
 
-  if (changeBgToOpacity) {
-    setBgStyle({ backgroundColor: bgColor(0.7) })
+  const changeBgToDefault = window.scrollY <= boundaries.welcome.bottom && bgStyle.backgroundColor !== boundaries.welcome.color
+
+  if (changeBgForAbout) {
+    setBgStyle({ backgroundColor: boundaries.about.color })
+  } else if (changeBgForExperience) {
+    setBgStyle({ backgroundColor: boundaries.experience.color })
+  } else if (changeBgForTech) {
+    setBgStyle({ backgroundColor: boundaries.tech.color })
+  } else if (changeBgForContact) {
+    setBgStyle({ backgroundColor: boundaries.contact.color })
   } else if (changeBgToDefault) {
-    setBgStyle({ backgroundColor: bgColor(0) })
+    setBgStyle({ backgroundColor: boundaries.welcome.color })
   }
 }
 

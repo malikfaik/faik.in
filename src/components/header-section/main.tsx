@@ -42,10 +42,10 @@ const logoGridSize: SectionColumn = {
 const DesktopNavigationComponent = (headerClasses: Record<string, string>): React.ReactElement => {
   return (
     <div className={headerClasses.navigationWrapper}>
-      <HoverUnderline onClick={() => animateScrollToTarget('About')} anchorClass={headerClasses.navigationText} linkText="About" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Experience')} anchorClass={headerClasses.navigationText} linkText="Experience" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Tech')} anchorClass={headerClasses.navigationText} linkText="Tech" />
-      <HoverUnderline onClick={() => animateScrollToTarget('Contact')} anchorClass={headerClasses.navigationText} linkText="Contact" />
+      <HoverUnderline onClick={() => animateScrollToTarget('About')} anchorClass={headerClasses.navigationText} linkText="about" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Experience')} anchorClass={headerClasses.navigationText} linkText="experience" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Tech')} anchorClass={headerClasses.navigationText} linkText="tech" />
+      <HoverUnderline onClick={() => animateScrollToTarget('Contact')} anchorClass={headerClasses.navigationText} linkText="contact" />
     </div>
   )
 }
@@ -64,16 +64,16 @@ const HamburgerNavigationComponent = (headerClasses: Record<string, string>): Re
       <animated.div className={headerClasses.navigationHamburgerItemsWrapper} style={translateMenuItems}>
         <ul className={headerClasses.navigationHamburgerItems}>
           <li role="presentation" onClick={() => onItemClickHandler('About')}>
-            About
+            about
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Experience')}>
-            Experience
+            experience
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Tech')}>
-            Tech
+            tech
           </li>
           <li role="presentation" onClick={() => onItemClickHandler('Contact')}>
-            Contact
+            contact
           </li>
         </ul>
       </animated.div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
-import { IoIosArrowDown } from 'react-icons/io'
+import { BsChevronCompactDown } from 'react-icons/bs'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import useWelcomeSectionStyle from './styles'
 import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
@@ -16,17 +16,23 @@ const Welcome = (): React.ReactElement => {
     <>
       <img className={welcomeStyles.coverPicture} alt="faik" src="/cover-picture.jpg" />
       <div className={welcomeStyles.whiteShade} />
-
       <div className={welcomeStyles.coverFlex}>
         <p className={welcomeStyles.nameText}>
-          <span>Faik Malik</span>
+          <span>FAIK MALIK</span>
         </p>
+        <div className={welcomeStyles.specialization}>
+          <span>frontend</span>
+          <span> . </span>
+          <span>backend</span>
+          <span> . </span>
+          <span>devops</span>
+        </div>
         <div className={welcomeStyles.currentLocation}>
           <HiOutlineLocationMarker className={welcomeStyles.locationItem} />
           <span>Munich, Germany</span>
         </div>
         <animated.div onClick={() => animateScrollToTarget('About')} className={welcomeStyles.downArrow} style={spring}>
-          <IoIosArrowDown />
+          <BsChevronCompactDown />
         </animated.div>
       </div>
     </>

@@ -5,7 +5,7 @@ const useContactSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Manrope', sans-serif`,
     fontSize: '4vmin',
     fontWeight: 400,
     height: '90vh',
@@ -30,7 +30,8 @@ const useContactSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Pixelify Sans', sans-serif`,
+    opacity: '0.7',
     fontSize: '15vmin',
     fontWeight: 100,
     height: '90vh',
@@ -50,7 +51,8 @@ const useContactSectionStyle = makeStyles(theme => ({
   footer: {
     alignItems: 'center',
     display: 'flex',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Pixelify Sans', sans-serif`,
+    opacity: '0.7',
     fontSize: '1.7vmin',
     fontWeight: 700,
 
@@ -74,24 +76,10 @@ const useContactSectionStyle = makeStyles(theme => ({
 
   greetingText: {
     fontWeight: 400,
-    marginRight: '3%',
 
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '4.5vmin',
-      fontWeight: 600,
-      marginRight: '3%'
-    }
-  },
-
-  contactSmileyIcon: {
-    display: 'block',
-    left: '43.2%',
-    marginTop: '-2.3%',
-    position: 'absolute',
-
-    [theme.breakpoints.between('xs', 'md')]: {
-      marginLeft: '49%',
-      marginTop: '-5.2%'
+      fontWeight: 600
     }
   },
 
@@ -110,8 +98,7 @@ const useContactSectionStyle = makeStyles(theme => ({
   emailContact: {
     cursor: 'pointer',
     fontWeight: 600,
-    marginLeft: '5.5%',
-    marginTop: '10%',
+    marginTop: '5%',
 
     '& a': {
       color: 'rgba(0, 0, 0, 0.87)',
@@ -125,7 +112,7 @@ const useContactSectionStyle = makeStyles(theme => ({
 
   contactSocialIconWrapper: {
     cursor: 'pointer',
-    marginTop: '10%',
+    marginTop: '5%',
 
     '& a': {
       color: 'rgba(0, 0, 0, 0.87)',

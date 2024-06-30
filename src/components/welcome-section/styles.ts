@@ -4,10 +4,15 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   coverPicture: {
     height: '100vh',
     objectFit: 'cover',
+    objectPosition: 'bottom',
     overflow: 'hidden',
     position: 'absolute',
     width: '100%',
-    zIndex: -2
+    zIndex: -2,
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      objectPosition: '70% 30%'
+    }
   },
 
   whiteShade: {
@@ -22,29 +27,21 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   coverFlex: {
     alignItems: 'center',
     display: 'flex',
-    fontFamily: `'Quicksand', sans-serif`,
+    fontFamily: `'Pixelify Sans', sans-serif`,
     height: '100vh',
     justifyContent: 'center',
     width: '100%'
   },
 
   nameText: {
-    fontSize: '10vmin',
-    fontWeight: 500,
+    fontSize: '8.5vmin',
+    fontWeight: 1000,
+    opacity: '0.7',
     zIndex: -1,
 
     '& span': {
       display: 'inline-block',
       position: 'relative',
-
-      '&::before, &::after': {
-        borderTop: '0.5vmin solid rgba(0, 0, 0, 0.87)',
-        content: `''`,
-        height: '1vmin',
-        marginTop: '7vmin',
-        position: 'absolute',
-        width: '30%'
-      },
 
       '&::before': {
         marginRight: '1vmin',
@@ -62,6 +59,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
     cursor: 'pointer',
     fontSize: '6vmin',
     position: 'absolute',
+    opacity: '0.7',
     top: '90%',
 
     [theme.breakpoints.between('xs', 'md')]: {
@@ -71,14 +69,30 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   },
 
   currentLocation: {
-    fontSize: '3vmin',
+    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontSize: '2vmin',
+    opacity: '0.7',
     fontWeight: 600,
     position: 'absolute',
-    top: '57%',
+    top: '60%',
 
     [theme.breakpoints.between('xs', 'md')]: {
       fontSize: '3.5vmin',
-      top: '55.5%'
+      top: '58%'
+    }
+  },
+
+  specialization: {
+    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontSize: '2vmin',
+    opacity: '0.7',
+    fontWeight: 600,
+    position: 'absolute',
+    top: '56%',
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      fontSize: '3.5vmin',
+      top: '54%'
     }
   },
 
