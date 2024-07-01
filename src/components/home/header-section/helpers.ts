@@ -1,6 +1,6 @@
 import { useState, useEffect, MutableRefObject, Dispatch, SetStateAction } from 'react'
 import { useSpring } from 'react-spring'
-import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
+import { animateScrollToTarget } from '../../shared/on-scroll-spring/main'
 
 export type HamburgerMenuHookInput = {
   rotateDegFrom: number
@@ -51,7 +51,7 @@ type UpdateOnScrollInput = {
  * @param bgStyle current background color state
  * @param refs refrences to different sections
  */
-const updateOnInterval = ({ setBgStyle, bgColor, bgStyle, refs }: UpdateOnScrollInput): void => {
+const updateOnInterval = ({ setBgStyle, bgStyle, refs }: UpdateOnScrollInput): void => {
   const getTopForElement = element => window.scrollY + element.getBoundingClientRect().top
 
   const boundaries = {

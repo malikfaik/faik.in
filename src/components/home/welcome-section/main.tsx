@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring'
 import { BsChevronCompactDown } from 'react-icons/bs'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import useWelcomeSectionStyle from './styles'
-import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
+import { animateScrollToTarget } from '../../shared/on-scroll-spring/main'
 
 const Welcome = (): React.ReactElement => {
   const welcomeStyles = useWelcomeSectionStyle()

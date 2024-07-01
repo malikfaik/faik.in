@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import useAboutSectionStyle from './styles'
 import aboutContent from './about-content'
-import { SectionColumn } from '../../config/types'
+import { SectionColumn } from '../../../config/types'
 
 const sectionColumnSize: SectionColumn = {
   xs: 12,

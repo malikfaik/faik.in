@@ -3,14 +3,15 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import * as Rdd from 'react-device-detect'
-import Header from '../components/header-section/main'
-import Welcome from '../components/welcome-section/main'
-import About from '../components/about-section/main'
-import Experience from '../components/experience-section/main'
-import Tech from '../components/tech-section/main'
-import Contact from '../components/contact-section/main'
-import { useScrollAnimation } from '../components/common-components/on-scroll-spring/main'
-import { pageview } from '../utils/analytics'
+import ReactHeap from 'reactjs-heap'
+import Header from '../components/home/header-section/main'
+import Welcome from '../components/home/welcome-section/main'
+import About from '../components/home/about-section/main'
+import Experience from '../components/home/experience-section/main'
+import Tech from '../components/home/tech-section/main'
+import Contact from '../components/home/contact-section/main'
+import { useScrollAnimation } from '../components/shared/on-scroll-spring/main'
+import { pageview, setHeapIdentity } from '../utils/analytics'
 
 const usePageStyle = makeStyles({
   headerFixed: {
@@ -39,8 +40,10 @@ const Home = (): React.ReactElement => {
     Tech: useRef(null),
     Contact: useRef(null)
   }
+
   useEffect(() => {
-    pageview(window.location.pathname, {
+    ReactHeap.initialize('1133118790')
+    const analyticsData = {
       browserVersion: Rdd.fullBrowserVersion,
       browserName: Rdd.browserName,
       mobileVendor: Rdd.mobileVendor,
@@ -49,7 +52,10 @@ const Home = (): React.ReactElement => {
       deviceType: Rdd.deviceType,
       userAgent: Rdd.getUA,
       referrer: document.referrer
-    })
+    }
+
+    pageview(window.location.pathname, analyticsData)
+    setHeapIdentity(analyticsData)
   })
 
   const pageStyle = usePageStyle()

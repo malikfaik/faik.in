@@ -6,7 +6,7 @@ import { animated } from 'react-spring'
 import techData from './tech-content'
 import { useAnimatedIcons, onHover, AnimatedHook } from './helpers'
 import useTechSectionStyle from './styles'
-import { SectionColumn } from '../../config/types'
+import { SectionColumn } from '../../../config/types'
 
 type TechListInput = {
   animatedSprings: AnimatedHook
@@ -40,6 +40,7 @@ const TechList = ({ animatedSprings, techClasses }: TechListInput): React.ReactE
   return (
     <Grid container>
       {techData.map((data, key) => {
+        // eslint-disable-next-line @next/next/no-img-element
         const icon = data.iconAvailable ? <data.icon className={techClasses.techIcons} /> : <img src={data.iconPath} className={techClasses.techIcons} alt={data.alt} />
 
         return (

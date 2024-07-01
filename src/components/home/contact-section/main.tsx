@@ -8,9 +8,9 @@ import { BiCopyright } from 'react-icons/bi'
 // Local Imports
 import useContactSectionStyle from './styles'
 import { onHover, useAnimationHook } from './helpers'
-import HoverUnderline from '../common-components/link-hover/main'
-import { SectionColumn } from '../../config/types'
-import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
+import HoverUnderline from '../../shared/link-hover/main'
+import { SectionColumn } from '../../../config/types'
+import { animateScrollToTarget } from '../../shared/on-scroll-spring/main'
 
 const sectionColumnSize: SectionColumn = {
   xs: 12,

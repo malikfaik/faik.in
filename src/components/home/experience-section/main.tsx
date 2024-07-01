@@ -5,10 +5,10 @@ import Grid from '@material-ui/core/Grid'
 import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
 import { getDateString } from './helpers'
-import { SectionColumn } from '../../config/types'
-import ModelBox from '../common-components/model-box/main'
-import { onOpen } from '../common-components/model-box/helpers'
-import HoverUnderline from '../common-components/link-hover/main'
+import { SectionColumn } from '../../../config/types'
+import ModelBox from '../../shared/model-box/main'
+import { onOpen } from '../../shared/model-box/helpers'
+import HoverUnderline from '../../shared/link-hover/main'
 
 type ExperienceListInput = {
   experienceClasses: Record<string, string>

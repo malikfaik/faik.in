@@ -8,10 +8,10 @@ import { CgClose } from 'react-icons/cg'
 
 // Local Imports
 import useHeaderSectionStyle from './styles'
-import HoverUnderline from '../common-components/link-hover/main'
-import { SectionColumn } from '../../config/types'
+import HoverUnderline from '../../shared/link-hover/main'
+import { SectionColumn } from '../../../config/types'
 import { useHamburgerMenuAnimation, HamburgerMenuHook, useBgStyle, BgStyleInput } from './helpers'
-import { animateScrollToTarget } from '../common-components/on-scroll-spring/main'
+import { animateScrollToTarget } from '../../shared/on-scroll-spring/main'
 
 type ToggledWhiteShadeInput = {
   refs: BgStyleInput['refs']
