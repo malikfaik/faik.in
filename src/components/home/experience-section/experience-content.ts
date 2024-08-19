@@ -8,7 +8,7 @@ export default [
     img: '/logos/pp.svg',
     className: 'bullet',
     tech: [techList.ts, techList.aws, techList.bullmq, techList.gitlab, techList.kube, techList.redis, techList.datadog, techList.tf],
-    description: `I am working at Peter-Park as a Lead Software Engineer, focussed on a wide array of areas, notably revenue, devops, core-apis etc, apart from that my day to day includes mentoring engineers, improving the architecture of the platform, given that the product is going through this scale-up phase, I am responsible to make we are able to handle the scale both from a technical and a human standpoint`,
+    description: `I am working at Peter-Park as a Lead Software Engineer, focussed on a wide array of areas, notably revenue, devops, core-apis etc, apart from that my day to day includes mentoring engineers, improving the architecture of the platform, given that the product is going through this scale-up phase, I am responsible to make sure we are able to handle the scale both from a technical and a human standpoint`,
     from: new Date('04/01/2024'),
     to: null
   },

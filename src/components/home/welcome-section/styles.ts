@@ -50,12 +50,28 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
       top: '38%'
     },
 
+    '@media (min-height: 650px)': {
+      top: '42%'
+    },
+
+    '@media (min-height: 710px)': {
+      top: '39%'
+    },
+
     '@media (min-height: 800px)': {
       top: '45%'
     },
 
-    '@media (min-height: 650px)': {
+    '@media (min-height: 870px)': {
       top: '42%'
+    },
+
+    '@media (min-height: 1000px)': {
+      top: '38%'
+    },
+
+    [theme.breakpoints.between('md', 'xl')]: {
+      top: '36%'
     }
   },
 
