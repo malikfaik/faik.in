@@ -62,7 +62,7 @@ export const techList: { [k: string]: IconTech | SvgTech } = {
   },
   aws: {
     id: 'aws',
-    name: 'aws',
+    name: 'AWS',
     slug: 'aws',
     icon: SiAmazonaws,
     type: FileType.icon
