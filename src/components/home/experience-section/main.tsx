@@ -5,21 +5,13 @@ import Grid from '@material-ui/core/Grid'
 import experienceContent from './experience-content'
 import useExperienceSectionStyle from './styles'
 import { getDateString } from './helpers'
-import { SectionColumn } from '../../../config/types'
-import ModelBox from '../../shared/model-box/main'
-import { onOpen } from '../../shared/model-box/helpers'
+import ModelBox from './model-box/main'
+import { onOpen } from './model-box/helpers'
 import HoverUnderline from '../../shared/link-hover/main'
+import { sectionColumnSize } from '../../../config/constants'
 
 type ExperienceListInput = {
   experienceClasses: Record<string, string>
-}
-
-const sectionColumnSize: SectionColumn = {
-  xs: 12,
-  sm: 12,
-  md: 12,
-  lg: 6,
-  xl: 6
 }
 
 /**
@@ -43,6 +35,7 @@ const ExperienceList = ({ experienceClasses }: ExperienceListInput): React.React
                     img: data.img,
                     description: data.description,
                     name: data.name,
+                    tech: data.tech,
                     duration: getDateString({ dateFrom: data.from, dateTo: data.to })
                   })
                 }

@@ -31,7 +31,7 @@ const useAboutSectionStyle = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     opacity: '0.7',
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     fontSize: '15vmin',
     fontWeight: 500,
     height: '100vh',

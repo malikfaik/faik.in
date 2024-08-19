@@ -11,14 +11,7 @@ import { onHover, useAnimationHook } from './helpers'
 import HoverUnderline from '../../shared/link-hover/main'
 import { SectionColumn } from '../../../config/types'
 import { animateScrollToTarget } from '../../shared/on-scroll-spring/main'
-
-const sectionColumnSize: SectionColumn = {
-  xs: 12,
-  sm: 12,
-  md: 12,
-  lg: 6,
-  xl: 6
-}
+import { sectionColumnSize } from '../../../config/constants'
 
 const fullLengthColumnSize: SectionColumn = {
   xs: 12,

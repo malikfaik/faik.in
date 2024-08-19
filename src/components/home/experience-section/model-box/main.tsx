@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { CgClose } from 'react-icons/cg'
 import { animated } from 'react-spring'
-import { Grid } from '@material-ui/core'
+import { Chip, Grid } from '@material-ui/core'
 import useModelBoxStyles from './styles'
-import { onClose, useAnimationHook } from './helpers'
-import { SectionColumn } from '../../../config/types'
+import { ModelData, onClose, useAnimationHook } from './helpers'
+import { SectionColumn } from '../../../../config/types'
+import { FileType, techList } from '../../../../config/tech-data'
 
 const sectionColumnSize: SectionColumn = {
   xs: 12,
@@ -33,8 +35,18 @@ const ModelBox = (): React.ReactElement => {
               </div>
             </Grid>
 
-            <Grid className={`${modelBoxClasses.modelBoxContent} ${modelBoxClasses.modelBoxBody}`} item {...sectionColumnSize}>
-              <p className={modelBoxClasses.modelBoxDescription}>{modelData.description}</p>
+            <Grid item {...sectionColumnSize}>
+              <Grid className={modelBoxClasses.modelBoxTech} item {...sectionColumnSize}>
+                {modelData.tech?.map((techItem: ModelData['tech'][0]) => {
+                  const data = techList[techItem.id]
+                  const icon = data.type === FileType.icon ? <data.icon className={modelBoxClasses.techIcons} /> : <img src={data.iconPath} className={modelBoxClasses.techIcons} alt={data.alt} />
+
+                  return <Chip variant="outlined" key={techItem.id} label={techItem.name} className={modelBoxClasses.modelBoxBadge} icon={icon} size="small" />
+                })}
+              </Grid>
+              <Grid className={`${modelBoxClasses.modelBoxContent} ${modelBoxClasses.modelBoxBody}`} item {...sectionColumnSize}>
+                <p className={modelBoxClasses.modelBoxDescription}>{modelData.description}</p>
+              </Grid>
             </Grid>
           </Grid>
         </div>

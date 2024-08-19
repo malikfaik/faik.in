@@ -27,7 +27,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   coverFlex: {
     alignItems: 'center',
     display: 'flex',
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     height: '100vh',
     justifyContent: 'center',
     width: '100%'
@@ -35,23 +35,27 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
 
   nameText: {
     fontSize: '8.5vmin',
+    position: 'absolute',
+    textAlign: 'center',
     fontWeight: 1000,
+    width: '100%',
     opacity: '0.7',
     zIndex: -1,
 
-    '& span': {
-      display: 'inline-block',
-      position: 'relative',
+    [theme.breakpoints.only('xs')]: {
+      top: '40%'
+    },
 
-      '&::before': {
-        marginRight: '1vmin',
-        right: '100%'
-      },
+    [theme.breakpoints.only('md')]: {
+      top: '38%'
+    },
 
-      '&::after': {
-        left: '100%',
-        marginLeft: '1vmin'
-      }
+    '@media (min-height: 800px)': {
+      top: '45%'
+    },
+
+    '@media (min-height: 650px)': {
+      top: '42%'
     }
   },
 
@@ -69,7 +73,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   },
 
   currentLocation: {
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     fontSize: '2vmin',
     opacity: '0.7',
     fontWeight: 600,
@@ -83,7 +87,7 @@ const useWelcomeSectionStyle = makeStyles(theme => ({
   },
 
   specialization: {
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif;`,
     fontSize: '2vmin',
     opacity: '0.7',
     fontWeight: 600,
