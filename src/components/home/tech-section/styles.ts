@@ -31,7 +31,7 @@ const useTechSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     opacity: '0.7',
     fontSize: '15vmin',
     fontWeight: 100,

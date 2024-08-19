@@ -15,8 +15,13 @@ export const pageview = (url: string, dataObject: Record<string, string>): void 
 }
 
 export const setHeapIdentity = async (additionalData: Record<string, unknown>): Promise<void> => {
-  const res = await fetch('https://geolocation-db.com/json/')
-  const data = await res.json()
-  window.heap.identify(data.IPv4)
-  window.heap.addUserProperties({ ...data, ...additionalData, dateAccessedISO: new Date().toISOString() })
+  try {
+    const res = await fetch('https://geolocation-db.com/json/')
+    const data = await res.json()
+    window.heap.identify(data.IPv4)
+    window.heap.addUserProperties({ ...data, ...additionalData, dateAccessedISO: new Date().toISOString() })
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Error setting heap identity:', error)
+  }
 }

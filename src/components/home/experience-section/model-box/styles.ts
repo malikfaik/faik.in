@@ -33,7 +33,6 @@ const useModelBoxStyles = makeStyles(theme => ({
   },
 
   modelBoxContent: {
-    alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
     fontFamily: `'Quicksand', sans-serif`,
@@ -41,7 +40,7 @@ const useModelBoxStyles = makeStyles(theme => ({
     fontWeight: 400,
     justifyContent: 'center',
     overflow: 'hidden',
-    paddingLeft: '2vmin',
+    maxWidth: '100%',
     paddingTop: '2vmin',
     textAlign: 'center',
     whiteSpace: 'pre-line'
@@ -110,6 +109,43 @@ const useModelBoxStyles = makeStyles(theme => ({
       marginLeft: '20%',
       textAlign: 'justify',
       width: '100%'
+    }
+  },
+
+  modelBoxTech: {
+    maxWidth: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '10%',
+    flexWrap: 'wrap', // Allow items to wrap to the next line if necessary
+    [theme.breakpoints.between('xs', 'md')]: {
+      marginBlockEnd: 0,
+      marginBlockStart: '1%',
+      marginLeft: '0%',
+      textAlign: 'center',
+      width: '100%'
+    }
+  },
+
+  modelBoxBadge: {
+    margin: '1%',
+    fontSize: '1.2vmin',
+    fontWeight: 700,
+    whiteSpace: 'normal', // Allow text to wrap normally
+    overflow: 'visible', // Ensure no content is hidden
+    textOverflow: 'clip', // Prevent ellipsis ('...')
+    maxWidth: '100%',
+    [theme.breakpoints.between('xs', 'md')]: {
+      fontSize: '2vmin'
+    }
+  },
+
+  techIcons: {
+    width: '15%',
+
+    [theme.breakpoints.between('xs', 'md')]: {
+      height: '90%',
+      width: '15%'
     }
   },
 

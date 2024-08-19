@@ -7,18 +7,12 @@ import techData from './tech-content'
 import { useAnimatedIcons, onHover, AnimatedHook } from './helpers'
 import useTechSectionStyle from './styles'
 import { SectionColumn } from '../../../config/types'
+import { sectionColumnSize } from '../../../config/constants'
+import { FileType } from '../../../config/tech-data'
 
 type TechListInput = {
   animatedSprings: AnimatedHook
   techClasses: Record<string, string>
-}
-
-const sectionColumnSize: SectionColumn = {
-  xs: 12,
-  sm: 12,
-  md: 12,
-  lg: 6,
-  xl: 6
 }
 
 const techSectionColumnSize: SectionColumn = {
@@ -41,7 +35,7 @@ const TechList = ({ animatedSprings, techClasses }: TechListInput): React.ReactE
     <Grid container>
       {techData.map((data, key) => {
         // eslint-disable-next-line @next/next/no-img-element
-        const icon = data.iconAvailable ? <data.icon className={techClasses.techIcons} /> : <img src={data.iconPath} className={techClasses.techIcons} alt={data.alt} />
+        const icon = data.type === FileType.icon ? <data.icon className={techClasses.techIcons} /> : <img src={data.iconPath} className={techClasses.techIcons} alt={data.alt} />
 
         return (
           <Grid key={data.id} className={techClasses.techListGrid} {...onHover({ scaleTo: 1.2, opacityTo: 1, currentIndex: key })} item {...techSectionColumnSize}>

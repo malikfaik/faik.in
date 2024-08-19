@@ -30,7 +30,7 @@ const useContactSectionStyle = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     opacity: '0.7',
     fontSize: '15vmin',
     fontWeight: 100,
@@ -51,7 +51,7 @@ const useContactSectionStyle = makeStyles(theme => ({
   footer: {
     alignItems: 'center',
     display: 'flex',
-    fontFamily: `'Pixelify Sans', sans-serif`,
+    fontFamily: `"DM Serif Text", serif`,
     opacity: '0.7',
     fontSize: '1.7vmin',
     fontWeight: 700,

@@ -1,57 +1,74 @@
+import { techList } from '../../../config/tech-data'
+
 export default [
+  {
+    name: 'Peter Park',
+    alt: 'peter-park',
+    id: '1',
+    img: '/logos/pp.svg',
+    className: 'bullet',
+    tech: [techList.ts, techList.aws, techList.bullmq, techList.gitlab, techList.kube, techList.redis, techList.datadog, techList.tf],
+    description: `I am working at Peter-Park as a Lead Software Engineer, focussed on a wide array of areas, notably revenue, devops, core-apis etc, apart from that my day to day includes mentoring engineers, improving the architecture of the platform, given that the product is going through this scale-up phase, I am responsible to make sure we are able to handle the scale both from a technical and a human standpoint`,
+    from: new Date('04/01/2024'),
+    to: null
+  },
   {
     name: 'Joyn',
     alt: 'joyn',
-    id: '1',
+    id: '2',
     img: '/logos/joyn.svg',
     className: 'bullet',
+    tech: [techList.ts, techList.python, techList.aws, techList.kafka, techList.gitlab, techList.elk, techList.dynatrace, techList.grafana, techList.cf, techList.srvjs],
     description:
-      "I am currently working at Joyn as a Lead Software Engineer within the Content Domain, I've played a pivotal role at Joyn, fostering a test-driven culture, evolving content pipeline architecture, mentoring engineers, and enhancing cross-team service management. Our tech stack includes TypeScript, AWS, and Python, alongside various tools for effective development and monitoring.",
-    from: new Date('02-01-2021'.replace(/-/g, '/')),
-    to: null
+      'I was working at Joyn as a Lead Software Engineer within the Content Domain, I played a pivotal role at Joyn, fostering a test-driven culture, evolving the architecture of the content pipeline, to make it more robust and performant. I was also heavily involved in mentoring engineers, and improving cross-team service management. My highlight at Joyn was our launch in Austria, where I was responsible for the content pipeline, which was a huge success, opening up our platform to 1M+ new users.',
+    from: new Date('02/01/2021'),
+    to: new Date('04/01/2024')
   },
   {
     name: 'Reneverse',
     alt: 'reneverse',
-    id: '2',
+    id: '3',
     img: '/logos/reneverse.svg',
     className: 'bullet',
+    tech: [techList.ts, techList.aws, techList.circle, techList.grafana, techList.blc, techList.cdk],
     description:
-      'I am working at Reneverse as a freelance Backend Engineer, In my role, I spearheaded the development of a server-less micro-services back-end, achieving 80ms peak traffic latency. I designed a secure custodial wallet using AWS KMS and IAM. Our codebase is TypeScript in a mono-repo, and we rely on various AWS services. Monitoring with Grafana, CloudWatch, and X-Ray, and CI/CD through CircleCI and Github Actions.',
-    from: new Date('02-01-2022'.replace(/-/g, '/')),
+      'I am working at Reneverse as a freelance Cross Functional Engineer, with mostly focused on platform.\nIn my role, I have spearheaded the development of a serverless micro-services backend capable of handling 1B+ request every month at an average latency of 80ms with 99.99% availability, apart from that I have architected mechanisms for provising and handling secure custodial wallets for blockchain use-cases.',
+    from: new Date('02/01/2022'),
     to: null
   },
   {
     name: 'Trivago',
     alt: 'trivago',
-    id: '3',
+    id: '4',
     img: '/logos/trivago.svg',
     className: 'bullet',
+    tech: [techList.ts, techList.go, techList.python, techList.php, techList.aws, techList.kafka, techList.nats, techList.jenkins, techList.srvjs, techList.cf, techList.instana],
     description:
-      'I was working at Trivago as a cross-functional engineer, primarily handling Back-end and Dev-Ops topics.\nIn my role, I enforced SOX compliance, crafted a subscription payment model, improved service performance, and mentored engineers. Modernized services, integrated teams. Tech stack: JavaScript, Go (Kafka), Python, PHP, Java. AWS (ECS, DynamoDB, RDS, Lambda) as cloud. Monitoring with Instana, NATS for communication, Kafka for cross-department, Jenkins for CI/CD.',
-    from: new Date('01-15-2020'.replace(/-/g, '/')),
-    to: new Date('02-01-2021'.replace(/-/g, '/'))
+      'I was working at Trivago as a cross-functional engineer, primarily handling Backend and DevOps topics.\nIn my role, I built tooling to enforce SOX compliance protocols for engineering across the B2B domain, architected services to support a subscription based payment model, improved service performance, and mentored engineers, alongside other responsibilities.',
+    from: new Date('01/15/2020'),
+    to: new Date('02/01/2021')
   },
   {
     name: 'Infino',
     alt: 'infino',
-    id: '4',
+    id: '5',
     img: '/logos/infino.svg',
     className: 'bullet',
+    tech: [techList.ts, techList.go, techList.python, techList.aws, techList.jenkins, techList.dynatrace, techList.rabbitmq],
     description:
-      'I worked at Infino as a Head of Engineering, I architected the back-end, built a PCI-compliant card vault, and secured partnerships with major Indian banks for payment settlement. Developed a Visa networking layer, mentored the team, and expanded it from 1 to 10+ engineers. From Tech side we were using TypeScript, Go, AWS (ECS, RDS, KMS), CloudWatch, Dynatrace.',
-    from: new Date('01-01-2019'.replace(/-/g, '/')),
-    to: new Date('12-01-2019'.replace(/-/g, '/'))
+      'I worked at Infino as a Head of Engineering, my work involved architecting the back-end from scratch, which included building a PCI-compliant card vault, developing a VISA networking layer for payments, mentoring the team and expanding it to 10+ engineers and working with external partners to secure partnerships with major Indian banks for payment settlement.',
+    from: new Date('01/01/2019'),
+    to: new Date('12/01/2019')
   },
   {
     name: 'Freelance',
     alt: 'freelance',
-    id: '5',
+    id: '6',
     img: '/logos/personal.svg',
     className: 'bullet',
     description:
-      'In my ten years of freelancing, I have worked with a plethora of clients, e.g. I collaborated with Accenture to modernize and scale data pipelines for AI models for there clients. I also worked with a variety of social organizations and enterprises, assisting in setting up for donation tech pipelines and digitizing tools for social workers, including a microloan management solution.',
-    from: new Date('01-01-2013'.replace(/-/g, '/')),
+      'In my ten years of freelancing, I have worked with a plethora of clients, e.g. I collaborated with Accenture to modernize and scale data pipelines for AI models for there clients. I also worked with a variety of social organizations and enterprises, assisting in setting up donation tech pipelines and digitizing tools for social workers, including a microloan management solution.',
+    from: new Date('01/01/2013'),
     to: null
   }
 ]
